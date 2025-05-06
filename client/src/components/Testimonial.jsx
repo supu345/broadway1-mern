@@ -23,6 +23,7 @@ const Testimonial = () => {
       image:
         "https://images.pexels.com/photos/819530/pexels-photo-819530.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
       text: "I completely agree! Broadway Tours & Travels ensured every aspect of our journey was seamless and spiritually fulfilling. Highly recommend them!",
+      title: "Senior RM",
     },
     {
       id: 3,
@@ -40,6 +41,7 @@ const Testimonial = () => {
       image:
         "https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
       text: "I had an amazing experience with Broadway Tours & Travels. They made the entire Umrah trip stress-free and memorable. Kudos to the team",
+      title: "Senior RM",
     },
     {
       id: 5,
@@ -48,6 +50,7 @@ const Testimonial = () => {
       image:
         "https://images.pexels.com/photos/7793741/pexels-photo-7793741.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
       text: "Broadway Tours & Travels exceeded my expectations. From accommodations to guides, everything was perfectly organized. A trustworthy choice!",
+      title: "Senior RM",
     },
   ];
   return (
@@ -101,7 +104,7 @@ const Testimonial = () => {
               >
                 {testimonials.map((item) => (
                   <SwiperSlide key={item.id}>
-                    <div className="border h-[320px] border-gray-200 shadow-lg rounded-lg flex flex-col p-4">
+                    <div className="border h-[330px] border-gray-200 shadow-lg rounded-lg flex flex-col p-4 ">
                       <div className="flex text-yellow-500">
                         {[...Array(5)].map((_, index) => (
                           <FaStar
@@ -126,7 +129,7 @@ const Testimonial = () => {
                           <h3 className="font-semibold text-green-600 text-lg">
                             {item.name}
                           </h3>
-                          {/* <p className="text-sm mt-1">{item.title}</p> */}
+                          <p className="text-sm mt-1 ">{item.title}</p>
                         </div>
                         <Quote className="text-green-400" />
                       </div>

@@ -32,7 +32,9 @@ const Pakages = () => {
             <p className="text-5xl font-bold  text-center">
               Explore Our
               <br />
-              <span className="text-amber-400">Hajj Umrah Packages </span>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-blue-300 to-green-500">
+                Hajj Umrah Packages
+              </span>
             </p>
             <p className="py-7 font-medium">
               Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec

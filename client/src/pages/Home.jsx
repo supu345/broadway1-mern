@@ -2,7 +2,7 @@ import React from "react";
 import { Menus } from "../utils";
 import Logo from "../assets/broadway-logo.jpg";
 import DesktopMenu from "../components/DesktopMenu";
-import Test1 from "../assets/test-1.png";
+import Test1 from "../assets/broadway1.png";
 import MobMenu from "../components/MobMenu";
 import Hero from "../components/Hero";
 import Pakages from "../components/pakages";
@@ -59,7 +59,7 @@ const Home = () => {
 
         <Pakages />
 
-        <ShariahConsultants />
+        {/* <ShariahConsultants /> */}
         <div className="px-6 mt-5">
           <motion.p
             variants={SlideUp(0.7)}

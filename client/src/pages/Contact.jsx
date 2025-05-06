@@ -9,7 +9,7 @@ const Contact = () => {
         className="relative bg-fixed h-[300px] bg-cover bg-center flex items-center justify-center"
         style={{
           backgroundImage:
-            "url('https://img.freepik.com/free-vector/arabic-ornamental-background-paper-style_23-2148877288.jpg')",
+            "url('https://images.pexels.com/photos/17228238/pexels-photo-17228238/free-photo-of-great-mosque-of-mecca.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2')",
         }}
       >
         <div className="absolute inset-0 bg-white/80"></div>
@@ -33,7 +33,9 @@ const Contact = () => {
             </button>
             <p className="text-3xl md:text-5xl font-bold mt-4">
               Looking For Cheap Packages? You Are At <br />
-              <span className="text-amber-600">The Right Place.</span>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-blue-300 to-green-500">
+                The Right Place.
+              </span>
             </p>
             <p className="mt-6 text-sm md:text-base">
               We prioritize customer satisfaction and strive to exceed

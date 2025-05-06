@@ -22,7 +22,10 @@ const Blogs = () => {
         >
           <p className="text-5xl font-bold  text-center">
             Stay Informed & Inspired <br />
-            With <span className="text-amber-400">Our Latest Blogs. </span>
+            With{" "}
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-blue-300 to-green-500">
+              Our Latest Blogs.{" "}
+            </span>
           </p>
           <p className="py-7">
             Dedicated to providing exceptional service from the moment you

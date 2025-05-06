@@ -77,7 +77,10 @@ const About = () => {
           <div className="text-center ">
             <div className="flex flex-col gap-3  ">
               <p className="text-5xl font-bold ">
-                Book Your <span className="text-amber-600">Hajj Packages </span>{" "}
+                Book Your{" "}
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-blue-300 to-green-500">
+                  Hajj Packages{" "}
+                </span>{" "}
                 Today
               </p>
               <p>
@@ -89,7 +92,7 @@ const About = () => {
             </div>
             <div className="flex flex-row gap-6 px-[450px]">
               <div className="py-6">
-                <button className="bg-amber-200 px-5 py-2 rounded-full font-semibold hover:bg-amber-400">
+                <button className="bg-green-200 px-5 py-2 rounded-full font-semibold hover:bg-amber-400">
                   Contact Now
                 </button>
               </div>
@@ -113,7 +116,9 @@ const About = () => {
 
           <p className="text-5xl font-bold mt-7 ">
             Meet the experts behind <br />
-            <span className="text-amber-600">our success. </span>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-blue-300 to-green-500">
+              our success.{" "}
+            </span>
           </p>
           <p className="mt-7 ">
             Dedicated and skilled team member with expertise in collaboration,
