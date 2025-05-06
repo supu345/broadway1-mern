@@ -10,14 +10,14 @@ import ShariahConsultants from "../components/ShariahConsultants";
 import Testimonial from "../components/Testimonial";
 import Footer from "../components/Footer";
 import Blogs from "../components/Blogs";
-import Hajj1 from "../assets/hajj2024-17.jpg";
-import Hajj2 from "../assets/hajj2024-18.jpg";
-import Hajj3 from "../assets/hajj2024-19.jpg";
-import Hajj4 from "../assets/hajj2024-20.jpg";
-import Hajj5 from "../assets/hajj2024-21.jpg";
-import Hajj6 from "../assets/hajj2024-22.jpg";
-import Hajj7 from "../assets/hajj2024-23.jpg";
-import Hajj8 from "../assets/hajj2024-24.jpg";
+// import Hajj1 from "../assets/hajj2024-17.jpg";
+// import Hajj2 from "../assets/hajj2024-18.jpg";
+// import Hajj3 from "../assets/hajj2024-19.jpg";
+// import Hajj4 from "../assets/hajj2024-20.jpg";
+// import Hajj5 from "../assets/hajj2024-21.jpg";
+// import Hajj6 from "../assets/hajj2024-22.jpg";
+// import Hajj7 from "../assets/hajj2024-23.jpg";
+// import Hajj8 from "../assets/hajj2024-24.jpg";
 import { motion } from "framer-motion";
 import { SlideUp } from "../utility/animation";
 const Home = () => {
@@ -70,7 +70,7 @@ const Home = () => {
             Our Gallery
           </motion.p>
 
-          <div className="dark:bg-black dark:text-white">
+          {/* <div className="dark:bg-black dark:text-white">
             <div className="container py-[40px] px-[40px] grid grid-cols-1 md:grid-cols-4  gap-[40px] mt-8">
               <div className="h-[280px]">
                 <img
@@ -129,7 +129,7 @@ const Home = () => {
                 />
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
         <Testimonial />
         <Blogs />
