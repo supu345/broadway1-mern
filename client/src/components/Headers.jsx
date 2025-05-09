@@ -1,223 +1,131 @@
-import React, { useEffect, useState, useRef } from "react";
-import { FaBars, FaTimes, FaUser, FaLock } from "react-icons/fa";
-import { Link, useLocation, useNavigate } from "react-router-dom";
-import logo from "../assets/broadway-logo1.png";
-import { MdOutlineKeyboardArrowDown } from "react-icons/md";
+import React, { useState } from "react";
+import { NavLink, Link } from "react-router-dom";
+import { FaCaretDown, FaWhatsapp } from "react-icons/fa";
+import ResponsiveMenu from "./ResponsiveMenu";
+import { HiMenuAlt3, HiMenuAlt1 } from "react-icons/hi";
+import { MdLightMode } from "react-icons/md";
+import { MdDarkMode } from "react-icons/md";
+import { MdOutlineFoodBank } from "react-icons/md";
+import { FaInstagram } from "react-icons/fa";
+import { FaFacebookF } from "react-icons/fa";
+import logo from "../assets/logo.jpg";
 
-const Headers = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isPagesOpen, setIsPagesOpen] = useState(false);
+export const NavbarLinks = [
+  {
+    name: "Home",
+    link: "/",
+  },
+  {
+    name: "Hajj-Packages",
+    link: "/hajj-packages",
+  },
+  {
+    name: "Umrah-Packages",
+    link: "/umrah-packages",
+  },
+  {
+    name: "About",
+    link: "/about",
+  },
+  {
+    name: "Contact",
+    link: "/contact",
+  },
+  {
+    name: "Gallery",
+    link: "/gallery",
+  },
+  {
+    name: "Blogs",
+    link: "/blogs",
+  },
+];
 
-  const dropdownRef = useRef(null);
+const Headers = ({ handleOrderPopup }) => {
+  const [showMenu, setShowMenu] = useState(false);
+  const [darkMode, setDarkMode] = useState(false);
+
+  const toggleDarkMode = () => {
+    setDarkMode(!darkMode);
+    if (darkMode) {
+      document.documentElement.classList.remove("dark");
+    } else {
+      document.documentElement.classList.add("dark");
+    }
+  };
 
   const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
+    setShowMenu(!showMenu);
   };
-
-  const togglePagesDropdown = () => {
-    setIsPagesOpen(!isPagesOpen);
-  };
-
-  const navigate = useNavigate();
-  const { pathname } = useLocation();
-
-  useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
-        setIsPagesOpen(false);
-      }
-    };
-
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
-  }, []);
 
   return (
-    <div>
-      <nav className="text-black">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-16">
-            {/* Logo */}
-            <Link to="/">
-              <div className="flex flex-row items-center justify-center md:justify-start">
-                <img className="w-[100px] h-[60px]" src={logo} alt="logo" />
-              </div>
-            </Link>
+    <>
+      <nav className="fixed top-0 right-0 w-full z-50 bg-white backdrop-blur-sm px-8">
+        <div className="container py-3 sm:py-0">
+          <div className="flex justify-between items-center">
+            {/* Logo and Brand Name */}
+            <div className="flex items-center gap-2 font-bold text-2xl">
+              <Link to={"/"} onClick={() => window.scrollTo(0, 0)}>
+                <div className="flex items-center gap-2 py-2">
+                  <Link to="/">
+                    <div className="flex flex-row items-center justify-center md:justify-start">
+                      <img
+                        className="w-[100px] h-[60px]"
+                        src={logo}
+                        alt="logo"
+                      />
+                    </div>
+                  </Link>
+                </div>
+              </Link>
+            </div>
 
-            {/* Desktop Menu */}
-            <div className="hidden md:flex space-x-6 font-bold text-gray-600">
-              <Link to="/" className="hover:text-green-600">
-                Home
+            {/* Navbar Links */}
+            <div className="hidden md:block">
+              <ul className="flex items-center gap-4   space-x-6 font-bold text-gray-600">
+                {NavbarLinks.map((data) => (
+                  <li className="py-4" key={data.name}>
+                    <NavLink to={data.link} activeClassName="active">
+                      {data.name}
+                    </NavLink>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Buttons and Hamburger */}
+            <div className="flex items-center gap-2 text-xl">
+              <Link
+                to="https://web.whatsapp.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaWhatsapp className="hover:text-blue-700 text-white text-3xl bg-green-600 rounded-full p-1" />
               </Link>
-              <Link to="/hajj-packages" className="hover:text-green-600">
-                Hajj-Packages
-              </Link>
-              <Link to="/umrah-packages" className="hover:text-green-600">
-                Umrah-Packages
-              </Link>
-              <Link to="/about" className="hover:text-green-600">
-                About
-              </Link>
-              <Link to="/contact" className="hover:text-green-600">
-                Contact
-              </Link>
-              <Link to="/gallery" className="hover:text-green-600">
-                Gallery
-              </Link>
-              {/* Pages Dropdown */}
-              <div className="relative" ref={dropdownRef}>
-                <button
-                  className="flex items-center gap-1 hover:text-green-600"
-                  onClick={togglePagesDropdown}
-                >
-                  Blog <MdOutlineKeyboardArrowDown />
-                </button>
-                {isPagesOpen && (
-                  <div className="absolute bg-white shadow-lg rounded-md mt-2 py-2 w-48 z-10">
-                    <Link
-                      to="/blog-details"
-                      className="block px-4 py-2 hover:bg-gray-200"
-                      onClick={() => setIsPagesOpen(false)}
-                    >
-                      Blog Details
-                    </Link>
-                    <Link
-                      to="/blogs"
-                      className="block px-4 py-2 hover:bg-gray-200"
-                      onClick={() => setIsPagesOpen(false)}
-                    >
-                      Blogs
-                    </Link>
-                  </div>
+
+              {/* Mobile Hamburger icon */}
+              <div className="md:hidden block">
+                {showMenu ? (
+                  <HiMenuAlt1
+                    onClick={toggleMenu}
+                    className="cursor-pointer transition-all"
+                    size={30}
+                  />
+                ) : (
+                  <HiMenuAlt3
+                    onClick={toggleMenu}
+                    className="cursor-pointer transition-all"
+                    size={30}
+                  />
                 )}
               </div>
-            </div>
-
-            <div className="flex flex-row gap-4">
-              <Link
-                className="flex cursor-pointer justify-center items-center gap-2 text-sm"
-                to="/dashboard"
-              >
-                <span>
-                  <FaUser />
-                </span>
-                <span>Name</span>
-              </Link>
-              <Link
-                to="/login"
-                className="flex cursor-pointer justify-center items-center gap-2 text-sm"
-              >
-                <span>
-                  <FaLock />
-                </span>
-                <span>Login</span>
-              </Link>
-            </div>
-
-            {/* Mobile Menu Button */}
-            <div className="md:hidden">
-              <button
-                onClick={toggleMenu}
-                className="text-2xl focus:outline-none"
-              >
-                {isMenuOpen ? <FaTimes /> : <FaBars />}
-              </button>
             </div>
           </div>
-
-          {/* Mobile Menu */}
-          {isMenuOpen && (
-            <div className="md:hidden h-[450px]  text-black p-4 space-y-4">
-              <Link
-                to="/"
-                className="block hover:bg-blue-600 px-3 py-2 rounded"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Home
-              </Link>
-              <Link
-                to="/hajj-packages"
-                className="block hover:bg-blue-600 px-3 py-2 rounded"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Hajj-Packages
-              </Link>
-              <Link
-                to="/umrah-packages"
-                className="block hover:bg-blue-600 px-3 py-2 rounded"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Umrah-Packages
-              </Link>
-              <Link
-                to="/about"
-                className="block hover:bg-blue-600 px-3 py-2 rounded"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                About
-              </Link>
-              <Link
-                to="/services"
-                className="block hover:bg-blue-600 px-3 py-2 rounded"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Services
-              </Link>
-              <Link
-                to="/contact"
-                className="block hover:bg-blue-600 px-3 py-2 rounded"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Contact
-              </Link>
-              <Link
-                to="/gallery"
-                className="block hover:bg-blue-600 px-3 py-2 rounded"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Gallery
-              </Link>
-              {/* Mobile Pages Dropdown */}
-              <div>
-                <button
-                  className="block w-full text-left hover:bg-blue-600 px-3 py-2 rounded"
-                  onClick={togglePagesDropdown}
-                >
-                  Blog <MdOutlineKeyboardArrowDown />
-                </button>
-                {isPagesOpen && (
-                  <div className="ml-4 space-y-2 z-10 ">
-                    <Link
-                      to="/blog-details"
-                      className="block hover:bg-gray-200 px-3 py-1 rounded"
-                      onClick={() => {
-                        setIsMenuOpen(false);
-                        setIsPagesOpen(false);
-                      }}
-                    >
-                      Blog Details
-                    </Link>
-                    <Link
-                      to="/blogs"
-                      className="block hover:bg-gray-200 px-3 py-1 rounded"
-                      onClick={() => {
-                        setIsMenuOpen(false);
-                        setIsPagesOpen(false);
-                      }}
-                    >
-                      Blogs
-                    </Link>
-                  </div>
-                )}
-              </div>
-            </div>
-          )}
         </div>
+        {/* Passing the state to ResponsiveMenu */}
+        <ResponsiveMenu setShowMenu={setShowMenu} showMenu={showMenu} />
       </nav>
-    </div>
+    </>
   );
 };
-
 export default Headers;

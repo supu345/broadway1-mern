@@ -1,13 +1,15 @@
 import React from "react";
 import Blogs from "../components/Blogs";
+import banner9 from "../assets/banner/banner9.jpeg";
 const Blog = () => {
   return (
     <div>
       <div
         className="relative bg-fixed h-[300px] bg-cover bg-center flex items-center justify-center"
         style={{
-          backgroundImage:
-            "url('https://images.pexels.com/photos/4744570/pexels-photo-4744570.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2')",
+          backgroundImage: `url(${banner9})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
         }}
       >
         <div className="absolute inset-0 bg-black/40"></div>

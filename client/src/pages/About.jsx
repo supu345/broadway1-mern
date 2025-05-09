@@ -1,14 +1,20 @@
 import React from "react";
 import Muhmud1 from "../assets/mahmud1.jpg";
+import mahmud from "../assets/mahmud.jpg";
+import Jaffar from "../assets/Jaffar.jpg";
+import Avater from "../assets/avatar.jpg";
 import Blogs from "../components/Blogs";
+import banner8 from "../assets/banner/banner8.jpeg";
+
 const About = () => {
   return (
     <div>
       <div
         className="relative bg-fixed h-[300px] bg-cover bg-center flex items-center justify-center"
         style={{
-          backgroundImage:
-            "url('https://img.freepik.com/free-vector/arabic-ornamental-background-paper-style_23-2148877288.jpg?t=st=1745168552~exp=1745172152~hmac=a2490664eb98b77e20e97abb56ab1ae50b0f8192e49d8775eacf372e74f6ad88&w=1380')",
+          backgroundImage: `url(${banner8})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
         }}
       >
         <div className="absolute inset-0 bg-white/80"></div>
@@ -132,7 +138,18 @@ const About = () => {
       <div className="grid grid-cols-1 md:grid-cols-4 gap-4 px-3">
         <div className="text-center">
           <img
-            src="https://images.pexels.com/photos/9218726/pexels-photo-9218726.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+            src={mahmud}
+            alt="image"
+            className="rounded-xl h-[350px] w-full object-cover"
+          />
+          <div className="border border-gray-200 mt-4 py-5 rounded-xl">
+            <p className="text-2xl font-medium ">mahmud</p>
+            {/* <p>Operations Manager</p> */}
+          </div>
+        </div>
+        <div className="text-center">
+          <img
+            src={Jaffar}
             alt="image"
             className="rounded-xl h-[350px] w-full object-cover"
           />
@@ -143,34 +160,23 @@ const About = () => {
         </div>
         <div className="text-center">
           <img
-            src="https://images.pexels.com/photos/7129607/pexels-photo-7129607.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+            src={Avater}
             alt="image"
             className="rounded-xl h-[350px] w-full object-cover"
           />
           <div className="border border-gray-200 mt-4 py-5 rounded-xl">
-            <p className="text-2xl font-medium ">Emily Carter</p>
-            <p>Operations Manager</p>
-          </div>
-        </div>
-        <div className="text-center">
-          <img
-            src="https://images.pexels.com/photos/3890524/pexels-photo-3890524.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-            alt="image"
-            className="rounded-xl h-[350px] w-full object-cover"
-          />
-          <div className="border border-gray-200 mt-4 py-5 rounded-xl">
-            <p className="text-2xl font-medium ">Ethan Collins</p>
+            <p className="text-2xl font-medium ">monir</p>
             <p>Quality Control Supervisor</p>
           </div>
         </div>
         <div className="text-center">
           <img
-            src="https://images.pexels.com/photos/16145658/pexels-photo-16145658/free-photo-of-portrait-of-an-old-man.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+            src={Avater}
             alt="image"
             className="rounded-xl h-[350px] w-full object-cover"
           />
           <div className="border border-gray-200 mt-4 py-5 rounded-xl">
-            <p className="text-2xl font-medium ">Michael Bennet</p>
+            <p className="text-2xl font-medium ">Selim</p>
             <p>Team Leader</p>
           </div>
         </div>

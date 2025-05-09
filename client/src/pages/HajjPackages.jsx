@@ -1,13 +1,13 @@
 import React from "react";
 import Pakages from "../components/pakages";
 import { Link } from "react-router-dom";
-
+import banner6 from "../assets/banner/banner6.jpeg";
 const HajjPackages = () => {
   return (
     <div>
       <div className="relative">
         <img
-          src="https://images.pexels.com/photos/26436656/pexels-photo-26436656/free-photo-of-long-exposure-photo-of-kaaba-surrounded-by-crowds-of-people.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+          src={banner6}
           alt="image"
           className="h-[300px] w-[1400px] object-cover"
         />

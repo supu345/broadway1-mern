@@ -6,6 +6,11 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { EffectFade, Navigation, Pagination, Autoplay } from "swiper/modules";
 import Arafah from "../assets/arafah.png";
+import banner1 from "../assets/banner/banner1.jpeg";
+import banner2 from "../assets/banner/banner2.jpeg";
+import banner3 from "../assets/banner/banner3.jpeg";
+import banner4 from "../assets/banner/banner4.jpeg";
+import banner5 from "../assets/banner/banner5.jpeg";
 const Hero = () => {
   return (
     <div>
@@ -22,7 +27,7 @@ const Hero = () => {
           <SwiperSlide>
             <div className="relative h-full w-full flex flex-col items-start pl-[100px] justify-center p-4 bg-gray-900 bg-opacity-50">
               <img
-                src="https://images.pexels.com/photos/20472958/pexels-photo-20472958/free-photo-of-men-gathered-around-kaba-in-mecca.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                src={banner1}
                 alt="Nature 1"
                 className="w-full h-full object-cover absolute top-0 left-0 z-0"
               />
@@ -62,7 +67,7 @@ const Hero = () => {
           <SwiperSlide>
             <div className="relative h-full w-full flex flex-col  items-start pl-[100px] justify-center p-4 bg-gray-900 bg-opacity-50">
               <img
-                src="https://images.pexels.com/photos/18360295/pexels-photo-18360295/free-photo-of-prophets-mosque-in-medina.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                src={banner2}
                 alt="Nature 3"
                 className="w-full h-full object-cover absolute top-0 left-0 z-0"
               />
@@ -81,7 +86,7 @@ const Hero = () => {
           <SwiperSlide>
             <div className="relative h-full w-full flex flex-col  items-start pl-[100px] justify-center p-4 bg-gray-900 bg-opacity-50">
               <img
-                src="https://images.pexels.com/photos/27130649/pexels-photo-27130649/free-photo-of-pilgrims-around-kaaba-in-al-haram-mosque-in-mecca.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                src={banner3}
                 alt="Nature 4"
                 className="w-full h-full object-cover absolute top-0 left-0 z-0"
               />
@@ -102,7 +107,7 @@ const Hero = () => {
           <SwiperSlide>
             <div className="relative h-full w-full flex flex-col  items-start pl-[100px] justify-center p-4 bg-gray-900 bg-opacity-50">
               <img
-                src="https://images.pexels.com/photos/16012748/pexels-photo-16012748/free-photo-of-close-up-of-kaaba.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                src={banner5}
                 alt="Nature 4"
                 className="w-full h-full object-cover absolute top-0 left-0 z-0"
               />
@@ -121,7 +126,7 @@ const Hero = () => {
           <SwiperSlide>
             <div className="relative h-full w-full flex flex-col  items-start pl-[100px] justify-center p-4 bg-gray-900 bg-opacity-50">
               <img
-                src="https://images.pexels.com/photos/2787826/pexels-photo-2787826.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                src={banner4}
                 alt="Nature 4"
                 className="w-full h-full object-cover absolute top-0 left-0 z-0"
               />

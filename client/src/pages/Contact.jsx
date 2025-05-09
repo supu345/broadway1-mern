@@ -1,6 +1,7 @@
 import React from "react";
 import NumberCounter from "../components/NumberCounter";
-
+import Hajj24 from "../assets/hajj2024-24.jpg";
+import banner4 from "../assets/packages/banner4.jpeg";
 const Contact = () => {
   return (
     <div>
@@ -8,8 +9,9 @@ const Contact = () => {
       <div
         className="relative bg-fixed h-[300px] bg-cover bg-center flex items-center justify-center"
         style={{
-          backgroundImage:
-            "url('https://images.pexels.com/photos/17228238/pexels-photo-17228238/free-photo-of-great-mosque-of-mecca.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2')",
+          backgroundImage: `url(${banner4})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
         }}
       >
         <div className="absolute inset-0 bg-white/80"></div>
@@ -24,10 +26,10 @@ const Contact = () => {
       </div>
 
       {/* Form Section */}
-      <div className="flex flex-col md:flex-row gap-4 mt-10 px-4">
+      <div className="flex flex-col md:flex-row gap-6 mt-10 px-4">
         {/* Left Section */}
-        <div className="w-full md:w-1/2">
-          <div className="py-6">
+        <div className="w-full md:w-1/2  ">
+          {/* <div className="py-6">
             <button className="border px-5 py-2 rounded-full font-semibold hover:bg-amber-400">
               Book the Travel
             </button>
@@ -42,11 +44,12 @@ const Contact = () => {
               expectations with attention to detail & commitment.
             </p>
           </div>
-          <NumberCounter />
+          <NumberCounter /> */}
+          <img src={Hajj24} alt="" className="rounded-2xl" />
         </div>
 
         {/* Right Section */}
-        <div className="bg-sky-100 rounded-2xl w-full md:w-1/2 p-6">
+        {/* <div className="bg-sky-100 rounded-2xl w-full md:w-1/2 p-6">
           <div className="flex flex-col md:flex-row gap-4">
             <div className="flex-1 mb-6">
               <label className="uppercase text-sm">Your Name</label>
@@ -97,7 +100,63 @@ const Contact = () => {
           >
             Submit Message
           </button>
-        </div>
+        </div> */}
+
+        <form
+          action="https://getform.io/f/bxooowga"
+          method="POST"
+          className="w-full md:w-1/2 bg-gray-100 rounded-lg border
+            border-blue-300 shadow-lg shadow-blue-500 p-10"
+        >
+          <h1 className="text-gray-900 text-4xl font-bold mb-7">Contact Me</h1>
+          <div className="mb-4">
+            <label
+              htmlFor="name"
+              className="block text-sm font-medium text-gray-700"
+            >
+              Name
+            </label>
+            <input
+              type="text"
+              name="name" // Add this
+              id="name"
+              placeholder="Full Name"
+              className="mt-1 p-2 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+            />
+          </div>
+          <div className="mb-4">
+            <label
+              htmlFor="email"
+              className="block text-sm font-medium text-gray-700"
+            >
+              Email
+            </label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Email"
+              className="mt-1 p-2 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+            />
+          </div>
+          <div className="mb-4">
+            <label
+              htmlFor="message"
+              className="block text-sm font-medium text-gray-700"
+            >
+              Message
+            </label>
+            <textarea
+              id="message"
+              name="message"
+              placeholder="Enter Your Message"
+              className="mt-1 p-2 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+            />
+          </div>
+          <button className="bg-blue-500 text-white px-3 py-2 rounded-lg">
+            Send Message
+          </button>
+        </form>
       </div>
 
       {/* Map Section */}

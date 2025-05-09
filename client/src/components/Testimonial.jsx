@@ -55,26 +55,18 @@ const Testimonial = () => {
   ];
   return (
     <div className="px-6 py-9">
-      <p className="text-3xl font-bold"> Amazing Review from Customers</p>
-      <div className="flex flex-row gap-6 mt-7">
-        <div className="w-1/4 py-[200px] pl-7">
-          <p className="text-2xl font-bold"> EXCELLENT</p>
-          <div className="flex flex-row text-2xl text-amber-300">
-            <FaStar />
-            <FaStar />
-            <FaStar />
-            <FaStar />
-            <FaStar />
-          </div>
-          <p className="text-md">
-            {" "}
-            Based on <span className="text-md font-bold"> 39 reviews</span>
-          </p>
-        </div>
-        {/* testionial */}
-        <div className="w-3/4">
+      <div className="flex flex-col lg:flex-row gap-6 lg:gap-3 mt-7">
+        <img
+          src="https://images.pexels.com/photos/2895295/pexels-photo-2895295.jpeg?auto=compress&cs=tinysrgb&w=600"
+          alt="photo"
+          className="rounded-2xl h-[300px] lg:h-[400px] w-full lg:w-[400px] mx-auto lg:mx-0 mt-6 lg:mt-12 object-cover transition duration-700  ease-in-out hover:scale-105"
+        />
+        <div className="w-full lg:w-3/4">
           <div id="testimonials" className="py-10 bg-white relative">
-            <div className="max-w-6xl mx-auto py-10 px-5">
+            <p className="text-2xl lg:text-3xl font-bold text-center lg:text-left ml-0 lg:ml-7">
+              Amazing Review from Customers
+            </p>
+            <div className="max-w-full lg:max-w-6xl mx-auto py-10 px-4">
               <Swiper
                 style={{
                   "--swiper-pagination-color": "#00C400",
@@ -87,13 +79,12 @@ const Testimonial = () => {
                 loop={true}
                 speed={600}
                 autoplay={{ delay: 5000 }}
-                slidesPerView={3}
-                spaceBetween={30}
+                slidesPerView={1}
+                spaceBetween={5}
                 breakpoints={{
-                  320: { slidesPerView: 1 },
-                  480: { slidesPerView: 1 },
-                  768: { slidesPerView: 2 },
-                  1024: { slidesPerView: 3 },
+                  640: { slidesPerView: 1, spaceBetween: 5 },
+                  768: { slidesPerView: 2, spaceBetween: 8 },
+                  1024: { slidesPerView: 3, spaceBetween: 10 },
                 }}
                 pagination={{
                   el: ".swiper-pagination",
@@ -104,7 +95,7 @@ const Testimonial = () => {
               >
                 {testimonials.map((item) => (
                   <SwiperSlide key={item.id}>
-                    <div className="border h-[330px] border-gray-200 shadow-lg rounded-lg flex flex-col p-4 ">
+                    <div className="border h-[330px] border-gray-200 shadow-lg rounded-lg flex flex-col p-4">
                       <div className="flex text-yellow-500">
                         {[...Array(5)].map((_, index) => (
                           <FaStar
@@ -123,13 +114,14 @@ const Testimonial = () => {
                           <img
                             src={item.image}
                             alt="photo1"
-                            className="h-[70px] cursor-pointer w-[70px] object-cover rounded-full transform  transition duration-300 ease-in-out hover:scale-110 !important"
+                            className="h-[60px] lg:h-[70px] w-[60px] lg:w-[70px] object-cover rounded-full transition-transform transform hover:scale-110"
                           />
-
-                          <h3 className="font-semibold text-green-600 text-lg">
+                          <h3 className="font-semibold text-green-600 text-base lg:text-lg">
                             {item.name}
                           </h3>
-                          <p className="text-sm mt-1 ">{item.title}</p>
+                          <p className="text-xs lg:text-sm mt-1">
+                            {item.title}
+                          </p>
                         </div>
                         <Quote className="text-green-400" />
                       </div>
@@ -137,8 +129,9 @@ const Testimonial = () => {
                   </SwiperSlide>
                 ))}
               </Swiper>
+
               {/* Pagination dots container */}
-              <div className="swiper-pagination my-10 flex justify-center"></div>
+              <div className="swiper-pagination my-6 flex justify-center"></div>
             </div>
           </div>
         </div>

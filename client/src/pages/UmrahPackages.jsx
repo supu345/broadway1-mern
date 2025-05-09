@@ -1,5 +1,5 @@
 import React from "react";
-import Pakages from "../components/pakages";
+import UmrahPkg from "../components/UmrahPkg";
 import { CgCalendarDates } from "react-icons/cg";
 import { IoDocumentTextOutline } from "react-icons/io5";
 import { RiHotelLine } from "react-icons/ri";
@@ -8,13 +8,16 @@ import { RiPassportLine } from "react-icons/ri";
 import { FaAngleRight } from "react-icons/fa";
 import { MdDoubleArrow } from "react-icons/md";
 import { Link } from "react-router-dom";
+import { FaArrowRightLong } from "react-icons/fa6";
+import Package8 from "../assets/packages/packages8.jpeg";
+import banner7 from "../assets/banner/banner7.jpeg";
 const UmrahPackages = () => {
   return (
     <div>
       {" "}
       <div className="relative">
         <img
-          src="https://images.pexels.com/photos/12607981/pexels-photo-12607981.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+          src={banner7}
           alt="image"
           className="h-[300px] w-[1400px] object-cover"
         />
@@ -41,76 +44,8 @@ const UmrahPackages = () => {
           journey.
         </p>
 
-        <p className="text-3xl font-bold py-9">
-          Available Umrah Package & Price 2025 from Dhaka
-        </p>
-
-        <p>
-          Call us today at +880 1713 155200 for a fully-guided and affordable
-          Umrah package from Bangladesh.
-        </p>
-
         <div>
-          <Pakages />
-        </div>
-      </div>
-      <div className="pb-8 bg-[url('https://img.freepik.com/free-vector/flat-arabic-pattern-background_79603-1826.jpg?t=st=1745132605~exp=1745136205~hmac=4850023e69fe9f3ab56321c8bcef4ae1bf91691eefbc1dceb51dccda4299d36c&w=1380')] ">
-        <p className="py-7 "></p>
-
-        <div>
-          <div className="flex flex-row px-9 ">
-            <div className="w-1/2 rounded-md bg-white shadow-md h-[500px]">
-              <div className="bg-white rounded-b-lg">
-                <div className=" transition-all duration-500  dark:bg-slate-950 dark:text-white cursor-pointer rounded-lg">
-                  <div className="space-y-2 p-3 pl-9">
-                    <h1 className="line-clamp-1 font-bold text-2xl">
-                      Customized Umrah Package
-                    </h1>
-                    <div className="flex items-center gap-2 opacity-70">
-                      <CgCalendarDates />
-                      <span>location</span>
-                    </div>
-                    <div className="flex items-center gap-2 opacity-70">
-                      <IoDocumentTextOutline />
-                      <span>guide</span>
-                    </div>
-                    <div className="flex items-center gap-2 opacity-70">
-                      <RiHotelLine />
-                      <span>hotel</span>
-                    </div>
-                    <div className="flex items-center gap-2 opacity-70">
-                      <MdNoMeals />
-                      <span>meals</span>
-                    </div>
-                    <div className="flex items-center gap-2 opacity-70">
-                      <RiPassportLine />
-                      <span>visa</span>
-                    </div>
-                    <div className="flex items-center justify-between border-t-2 py-3 !mt-3">
-                      <div className="opacity-70">
-                        <p>Cultural Relax</p>
-                      </div>
-                      <div>
-                        <p className="text-2xl font-bold">$6700</p>
-                      </div>
-                    </div>
-                    <div>
-                      <button className="flex items-center gap-2 hover:bg-card hover:text-white border-2 border-orange-500 transition-all duration-600 text-black uppercase px-5 py-3 rounded-full text-md">
-                        learn more <FaAngleRight />
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="w-1/2 shadow-md rounded-md">
-              <img
-                src="https://images.pexels.com/photos/30768739/pexels-photo-30768739/free-photo-of-pilgrims-at-al-masjid-an-nabawi-in-medina.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-                alt="test1"
-                className=" h-[500px] w-full object-cover "
-              />
-            </div>
-          </div>
+          <UmrahPkg />
         </div>
       </div>
       <div className="px-9 py-9">
@@ -160,15 +95,15 @@ const UmrahPackages = () => {
               </div>
               <div className="flex flex-row gap-3 items-center">
                 <MdDoubleArrow />
-                <p className="py-1">Private transportation in Saudi</p>
+                <p className="py-1">24/7 Assistance and Guidance</p>
               </div>
               <div className="flex flex-row gap-3 items-center">
                 <MdDoubleArrow />
-                <p className="py-1">Private transportation in Saudi</p>
+                <p className="py-1">Complimentary Ziyarah Tours</p>
               </div>
               <div className="flex flex-row gap-3 items-center">
                 <MdDoubleArrow />
-                <p className="py-1">Private transportation in Saudi</p>
+                <p className="py-1">Flexible Meal Plans</p>
               </div>
             </div>
             <div className="py-6">
@@ -177,11 +112,13 @@ const UmrahPackages = () => {
               </button>
             </div>
           </div>
-          <div className="w-1/2 py-[150px]">
+          <div className="w-1/2 py-[150px] group">
             <img
-              src=" https://images.pexels.com/photos/12765598/pexels-photo-12765598.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+              src={Package8}
               alt="image"
-              className="w-[500px] py-6"
+              className="w-[500px] py-6  h-[500px] rounded-tl-xl rounded-bl-xl
+            md:h-[500px] rounded-lg object-cover transition-transform
+            duration-500 group-hover:scale-105 group-hover:brightness-90"
             />
           </div>
         </div>

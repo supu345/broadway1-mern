@@ -1,13 +1,14 @@
 import React from "react";
 //import { Link } from "react-router-dom";
-import { FaFacebookF } from "react-icons/fa";
+import { FaFacebookF, FaInstagram } from "react-icons/fa";
 import { AiFillGithub, AiOutlineTwitter } from "react-icons/ai";
 import { FaArrowUp } from "react-icons/fa";
-import logo from "../assets/broadway-logo1.png";
+import logo from "../assets/logo.jpg";
 import { FaLinkedinIn } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { SlideUp } from "../utility/animation";
+import { FaWhatsapp } from "react-icons/fa";
 const Footer = () => {
   const scrollTop = () => {
     const scrollStep = -window.scrollY / 50;
@@ -27,7 +28,7 @@ const Footer = () => {
 
       <div className="absolute inset-0 bg-black opacity-80"></div>
 
-      <motion.p
+      <motion.div
         variants={SlideUp(0.5)}
         initial="hidden"
         whileInView={"visible"}
@@ -37,7 +38,7 @@ const Footer = () => {
           {/* Logo and About Section */}
           <div className="text-center md:w-6/12 sm:text-center md:text-left">
             <div className="flex flex-col gap-3 w-10/12 mx-auto md:mx-0">
-              <div className="flex flex-row items-center justify-center md:justify-start">
+              <div className="flex flex-row items-center bg-white w-[100px] p-1 px-2 justify-center md:justify-start">
                 <img className="w-[100px] h-[70px]" src={logo} alt="logo" />
               </div>
               <p>
@@ -49,19 +50,27 @@ const Footer = () => {
             <div className="flex justify-center md:justify-start items-center h-[50px] text-gray-200">
               <div className="flex gap-4">
                 <Link
-                  to="https://www.facebook.com/broadway.tours.travels"
+                  to="https://web.whatsapp.com/"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <FaFacebookF className="hover:text-blue-700" />
+                  <FaWhatsapp className="hover:text-blue-700 text-xl" />
                 </Link>
-
+                <div className="flex gap-4">
+                  <Link
+                    to="https://www.facebook.com/broadway.tours.travels"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <FaFacebookF className="hover:text-blue-700" />
+                  </Link>
+                </div>
                 <Link
                   to="https://www.instagram.com/broadway.tours.travels/reels/"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <FaLinkedinIn className="hover:text-red-700" />
+                  <FaInstagram className="hover:text-red-700" />
                 </Link>
 
                 {/* <Link href="#">
@@ -74,7 +83,7 @@ const Footer = () => {
           {/* Useful Links Section */}
           <div className="text-center md:w-3/12 sm:text-center md:text-left">
             <div className="flex flex-col gap-3">
-              <h2 className="font-bold text-lg mb-2 mt-6">Useful Links</h2>
+              <p className="font-bold text-lg mb-2 mt-6">Useful Links</p>
               <ul className="flex flex-col gap-2 text-white">
                 <li>
                   <Link to="/">Home</Link>
@@ -100,7 +109,7 @@ const Footer = () => {
           {/* Address Section */}
           <div className="text-center md:w-3/12 md:text-left">
             <div className="flex flex-col gap-3">
-              <h2 className="font-bold text-lg mb-2 mt-6">Address</h2>
+              <p className="font-bold text-lg mb-2 mt-6">Address</p>
               <ul className="flex flex-col gap-2 text-white">
                 <li>
                   Address :Park Plaza, Suite N4 (4th Floor), Plot 31, Road 17,
@@ -129,10 +138,10 @@ const Footer = () => {
         {/* Footer Bottom Section */}
         <div className="relative z-10 w-[85%] flex flex-wrap justify-center items-center text-white mx-auto py-5 text-center">
           <span className="text-white">
-            BroadWay Tours & Travels ©2025 All rights reserved | made by Suparna
+            BroadWay Tours & Travels ©2025 All rights reserved
           </span>
         </div>
-      </motion.p>
+      </motion.div>
     </footer>
   );
 };
