@@ -8,7 +8,12 @@ import blog3 from "../assets/blog3.jpg";
 const Blogs = () => {
   return (
     <div className="px-6 py-9 ">
-      <div className="text-center">
+      <motion.div
+        variants={SlideUp(0.2)}
+        initial="hidden"
+        whileInView={"visible"}
+        className="text-center"
+      >
         <p>
           <button className="border p-2 px-4 rounded-full mb-8">
             News & Article
@@ -28,57 +33,68 @@ const Blogs = () => {
             packages to completion of your pilgrimage.
           </p>
         </p>
-      </div>
+      </motion.div>
       <div className="grid md:grid-cols-3 gap-6 ">
-        <div className="">
+        {/* div-1 */}
+        <motion.div
+          variants={SlideUp(0.4)}
+          initial="hidden"
+          whileInView={"visible"}
+        >
           <img
             src={blog2}
             alt="image"
             className="rounded-2xl w-[400px] h-[300px] object-cover transform transition duration-300 ease-in-out  hover:scale-95"
           />
-          <motion.p
-            variants={SlideUp(0.7)}
-            initial="hidden"
-            whileInView={"visible"}
-          >
-            <p className="text-2xl font-semibold py-4">
-              The Surprising Benefits of Embracing Minimalism
+          <div>
+            <p className="text-lg font-semibold py-4">
+              ইহরাম করা ও ইহরাম পরা কি একই বিষয় ?
             </p>
             <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-              Perspiciatis quam sapiente reprehenderit vitae, magnam ullam quas!
-              Similique obcaecati nam fugit.
+              অনেক হজ্জযাত্রী মনে করেন, ইহরামের কাপড় পরা মানেই ইহরাম বেঁধে ফেলা।
+              কিন্তু বাস্তবে এই দুটি বিষয় আলাদা।
             </p>
             <Link to="/blog-details">
               <button className="uppercase font-bold py-8 text-blue-700 cursor-pointer hover:text-amber-800">
                 Read full blog
               </button>
             </Link>
-          </motion.p>
-        </div>
-        <div className="">
+          </div>
+        </motion.div>
+
+        {/* div-2 */}
+        <motion.div
+          variants={SlideUp(0.6)}
+          initial="hidden"
+          whileInView={"visible"}
+        >
           <img
             src={blog1}
             alt="image"
             className="rounded-2xl w-[400px] h-[300px] object-cover transform transition duration-300 ease-in-out  hover:scale-95"
           />
           <p variants={SlideUp(0.7)} initial="hidden" whileInView={"visible"}>
-            <p className="text-2xl font-semibold py-4">
-              The Surprising Benefits of Embracing Minimalism
+            <p className="text-lg font-semibold py-4">
+              হজযাত্রা: বিমানে ওঠার পূর্বে আপনার করণীয়।
             </p>
             <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-              Perspiciatis quam sapiente reprehenderit vitae, magnam ullam quas!
-              Similique obcaecati nam fugit.
+              আপনি যদি ঢাকা–জেদ্দা রুটে ভ্রমণ করেন, তাহলে বিমানে ওঠার আগেই
+              ইহরামের কাপড় পরিধান করুন। বিমানের ভেতরে এটি পরা কষ্টকর হবে।
             </p>
-            <Link to="/blog-details">
+            <Link to="/blog-details-two">
               <button className="uppercase font-bold py-8 text-blue-700 cursor-pointer hover:text-amber-800">
                 Read full blog
               </button>
             </Link>
           </p>
-        </div>
-        <div className="">
+        </motion.div>
+        {/* div-3 */}
+        <motion.div
+          variants={SlideUp(0.6)}
+          initial="hidden"
+          whileInView={"visible"}
+          className=""
+        >
           <img
             src={blog3}
             alt="image"
@@ -86,22 +102,24 @@ const Blogs = () => {
           />
 
           <p>
-            <p className="text-2xl font-semibold py-4">
-              The Surprising Benefits of Embracing Minimalism
+            <p className="text-lg font-semibold py-4">
+              ব্রডওয়ে ট্যুরস অ্যান্ড ট্রাভেলস লিমিটেড-এর ২০২৫ সালের হাজীদের জন্য
+              হজ্জ প্রশিক্ষণ কার্যক্রম শুরু হয়েছে।
             </p>
+            <p>প্রশিক্ষণ প্রদান করেন—</p>
+            <p>আমাদের সম্মানিত শারীয়াহ কনসালটেন্ট শাইখ ড. ইমাম হোসেন</p>
             <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-              Perspiciatis quam sapiente reprehenderit vitae, magnam ullam quas!
-              Similique obcaecati nam fugit.
+              আমিনাহ কুরআন শিক্ষা, গবেষণা ও প্রশিক্ষণ কেন্দ্রের পরিচালক জনাব
+              জাহিদুর রহমান
             </p>
 
-            <Link to="/blog-details">
+            <Link to="/blog-details-three">
               <button className="uppercase font-bold py-8 text-blue-700 cursor-pointer hover:text-amber-800">
                 Read full blog
               </button>
             </Link>
           </p>
-        </div>
+        </motion.div>
       </div>
     </div>
   );

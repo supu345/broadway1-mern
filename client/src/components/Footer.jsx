@@ -138,7 +138,14 @@ const Footer = () => {
         {/* Footer Bottom Section */}
         <div className="relative z-10 w-[85%] flex flex-wrap justify-center items-center text-white mx-auto py-5 text-center">
           <span className="text-white">
-            BroadWay Tours & Travels ©2025 All rights reserved
+            BroadWay Tours & Travels ©2025 All rights reserved | Developed by
+            <Link
+              to="https://codewithfoyzun.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span className="hover:underline"> Suparna</span>
+            </Link>
           </span>
         </div>
       </motion.div>

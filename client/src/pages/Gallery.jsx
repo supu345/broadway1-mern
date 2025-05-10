@@ -15,10 +15,37 @@ import Hajj13 from "../assets/hajj2024-13.jpg";
 import Hajj14 from "../assets/hajj2024-14.jpg";
 import Hajj15 from "../assets/hajj2024-15.jpg";
 import Hajj16 from "../assets/hajj2024-16.jpg";
+import banner4 from "../assets/packages/banner4.jpeg";
+import { motion } from "framer-motion";
+import { SlideUp } from "../utility/animation";
 const Gallery = () => {
   return (
     <div>
-      <div className="dark:bg-black dark:text-white">
+      {/* Top Section */}
+      <div
+        className="relative bg-fixed h-[300px] bg-cover bg-center flex items-center justify-center"
+        style={{
+          backgroundImage: `url(${banner4})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      >
+        <div className="absolute inset-0 bg-white/80"></div>
+        <div className="relative flex flex-col items-center">
+          <p className="text-center  text-4xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-800 via-blue-300 to-green-500">
+            Gallery
+          </p>
+        </div>
+        {/* <p className="absolute bottom-4 left-4 text-white text-lg md:text-2xl bg-black/80 px-4 py-2 rounded">
+                Home / HajjPackages
+              </p> */}
+      </div>
+      <motion.div
+        variants={SlideUp(0.2)}
+        initial="hidden"
+        whileInView={"visible"}
+        className=""
+      >
         <div className="container py-[80px] px-[40px] grid grid-cols-1 md:grid-cols-4  gap-[40px] mt-8">
           <div className="h-[280px]">
             <img
@@ -141,7 +168,7 @@ const Gallery = () => {
             }}
           ></div>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 };

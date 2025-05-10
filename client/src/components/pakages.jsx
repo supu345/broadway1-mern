@@ -17,11 +17,18 @@ import packages1 from "../assets/packages/packages1.jpeg";
 import packages3 from "../assets/packages/packages3.jpeg";
 import packages2 from "../assets/packages/packages2.jpeg";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
+import { SlideUp } from "../utility/animation";
 const Pakages = () => {
   return (
     <div className="px-6 py-9  ">
       <div>
-        <div className="text-center">
+        <motion.div
+          variants={SlideUp(0.2)}
+          initial="hidden"
+          whileInView={"visible"}
+          className="text-center"
+        >
           <button className="border p-2 px-4 rounded-full mb-8 uppercase">
             our Packages
           </button>
@@ -37,9 +44,14 @@ const Pakages = () => {
             Explore tailored Hajj and Umrah packages designed to provide a
             seamless spiritual journey with comfort, guidance, and convenience
           </p>
-        </div>
+        </motion.div>
         {/* pkg-1 */}
-        <div className="flex flex-col md:flex-row gap-9  bg-linear-to-r from-white to-green-100 rounded-lg border border-gray-200 p-5">
+        <motion.div
+          variants={SlideUp(0.4)}
+          initial="hidden"
+          whileInView={"visible"}
+          className="flex flex-col md:flex-row gap-9  bg-linear-to-r from-white to-green-100 rounded-lg border border-gray-200 p-5"
+        >
           <div className="w-full md:w-2/5 group">
             <img
               src={about2}
@@ -107,9 +119,14 @@ const Pakages = () => {
               </div>
             </div>
           </div>
-        </div>
+        </motion.div>
         {/* pkg-2 */}
-        <div className="flex flex-col md:flex-row mt-5 gap-9 bg-gradient-to-r from-green-100 to-white rounded-lg border border-gray-200 p-5">
+        <motion.div
+          variants={SlideUp(0.4)}
+          initial="hidden"
+          whileInView={"visible"}
+          className="flex flex-col md:flex-row mt-5 gap-9 bg-gradient-to-r from-green-100 to-white rounded-lg border border-gray-200 p-5"
+        >
           {/* Left Section */}
           <div className="w-full md:w-3/5">
             <p className="text-2xl sm:text-3xl md:text-4xl font-bold mt-6 text-gray-800">
@@ -180,10 +197,15 @@ const Pakages = () => {
               className="w-full h-[300px] md:h-[500px] rounded-lg object-cover transition-transform duration-500 group-hover:scale-105 group-hover:brightness-90"
             />
           </div>
-        </div>
+        </motion.div>
         {/* pkg-3 */}
 
-        <div className="flex flex-col md:flex-row gap-9  bg-linear-to-r from-white to-green-100 rounded-lg border border-gray-200 p-5">
+        <motion.div
+          variants={SlideUp(0.4)}
+          initial="hidden"
+          whileInView={"visible"}
+          className="flex flex-col md:flex-row gap-9  bg-linear-to-r from-white to-green-100 rounded-lg border border-gray-200 p-5"
+        >
           <div className="w-full md:w-2/5 group">
             <img
               src={packages3}
@@ -251,9 +273,14 @@ const Pakages = () => {
               </div>
             </div>
           </div>
-        </div>
+        </motion.div>
         {/* pkg-4 */}
-        <div className="flex flex-col md:flex-row mt-5 gap-9 bg-gradient-to-r from-green-100 to-white rounded-lg border border-gray-200 p-5">
+        <motion.div
+          variants={SlideUp(0.4)}
+          initial="hidden"
+          whileInView={"visible"}
+          className="flex flex-col md:flex-row mt-5 gap-9 bg-gradient-to-r from-green-100 to-white rounded-lg border border-gray-200 p-5"
+        >
           {/* Left Section */}
           <div className="w-full md:w-3/5">
             <p className="text-2xl sm:text-3xl md:text-4xl font-bold mt-6 text-gray-800">
@@ -324,7 +351,7 @@ const Pakages = () => {
               className="w-full h-[300px] md:h-[500px] rounded-lg object-cover transition-transform duration-500 group-hover:scale-105 group-hover:brightness-90"
             />
           </div>
-        </div>
+        </motion.div>
       </div>
 
       {/* <div>

@@ -6,6 +6,11 @@ import "swiper/css/pagination";
 import { Autoplay, Pagination } from "swiper/modules";
 import { Quote } from "lucide-react";
 import Fahim from "../assets/fahim.jpg";
+import Testi from "../assets/blog/testimonial.jpeg";
+import { motion } from "framer-motion";
+import { SlideUp } from "../utility/animation";
+import { SlideLeft } from "../utility/animation";
+import { SlideRight } from "../utility/animation";
 const Testimonial = () => {
   const testimonials = [
     {
@@ -56,12 +61,25 @@ const Testimonial = () => {
   return (
     <div className="px-6 py-9">
       <div className="flex flex-col lg:flex-row gap-6 lg:gap-3 mt-7">
-        <img
-          src="https://images.pexels.com/photos/2895295/pexels-photo-2895295.jpeg?auto=compress&cs=tinysrgb&w=600"
-          alt="photo"
-          className="rounded-2xl h-[300px] lg:h-[400px] w-full lg:w-[400px] mx-auto lg:mx-0 mt-6 lg:mt-12 object-cover transition duration-700  ease-in-out hover:scale-105"
-        />
-        <div className="w-full lg:w-3/4">
+        <motion.div
+          variants={SlideRight(0.4)}
+          initial="hidden"
+          whileInView="visible"
+          className="w-[500px]"
+        >
+          <img
+            src={Testi}
+            alt="photo"
+            className="rounded-2xl h-[300px] lg:h-[400px] w-full lg:w-[500px] md:w-[500px] mx-auto lg:mx-0 mt-6 lg:mt-12 object-cover transition duration-700  ease-in-out hover:scale-105"
+          />
+        </motion.div>
+
+        <motion.div
+          variants={SlideLeft(0.6)}
+          initial="hidden"
+          whileInView="visible"
+          className="w-full lg:w-3/4"
+        >
           <div id="testimonials" className="py-10 bg-white relative">
             <p className="text-2xl lg:text-3xl font-bold text-center lg:text-left ml-0 lg:ml-7">
               Amazing Review from Customers
@@ -134,7 +152,7 @@ const Testimonial = () => {
               <div className="swiper-pagination my-6 flex justify-center"></div>
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
     </div>
   );

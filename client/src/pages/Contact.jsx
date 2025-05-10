@@ -2,6 +2,8 @@ import React from "react";
 import NumberCounter from "../components/NumberCounter";
 import Hajj24 from "../assets/hajj2024-24.jpg";
 import banner4 from "../assets/packages/banner4.jpeg";
+import { motion } from "framer-motion";
+import { SlideUp } from "../utility/animation";
 const Contact = () => {
   return (
     <div>
@@ -16,7 +18,7 @@ const Contact = () => {
       >
         <div className="absolute inset-0 bg-white/80"></div>
         <div className="relative flex flex-col items-center">
-          <p className="text-center text-black text-4xl md:text-6xl font-bold">
+          <p className="text-center  text-4xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-800 via-blue-300 to-green-500">
             Contact Our Agency
           </p>
         </div>
@@ -28,81 +30,19 @@ const Contact = () => {
       {/* Form Section */}
       <div className="flex flex-col md:flex-row gap-6 mt-10 px-4">
         {/* Left Section */}
-        <div className="w-full md:w-1/2  ">
-          {/* <div className="py-6">
-            <button className="border px-5 py-2 rounded-full font-semibold hover:bg-amber-400">
-              Book the Travel
-            </button>
-            <p className="text-3xl md:text-5xl font-bold mt-4">
-              Looking For Cheap Packages? You Are At <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-blue-300 to-green-500">
-                The Right Place.
-              </span>
-            </p>
-            <p className="mt-6 text-sm md:text-base">
-              We prioritize customer satisfaction and strive to exceed
-              expectations with attention to detail & commitment.
-            </p>
-          </div>
-          <NumberCounter /> */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.5, delay: 0.6 }}
+          className="w-full md:w-1/2  "
+        >
           <img src={Hajj24} alt="" className="rounded-2xl" />
-        </div>
+        </motion.div>
 
-        {/* Right Section */}
-        {/* <div className="bg-sky-100 rounded-2xl w-full md:w-1/2 p-6">
-          <div className="flex flex-col md:flex-row gap-4">
-            <div className="flex-1 mb-6">
-              <label className="uppercase text-sm">Your Name</label>
-              <input
-                type="text"
-                className="w-full border border-gray-300 bg-white rounded-md px-4 py-2 mt-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                placeholder="Enter your name"
-              />
-            </div>
-            <div className="flex-1 mb-6">
-              <label className="uppercase text-sm">Your Email Address</label>
-              <input
-                type="text"
-                className="w-full border border-gray-300 bg-white rounded-md px-4 py-2 mt-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                placeholder="Enter email address"
-              />
-            </div>
-          </div>
-          <div className="flex flex-col md:flex-row gap-4">
-            <div className="flex-1 mb-6">
-              <label className="uppercase text-sm">Your Phone Number</label>
-              <input
-                type="text"
-                className="w-full border border-gray-300 bg-white rounded-md px-4 py-2 mt-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                placeholder="Enter your phone number"
-              />
-            </div>
-            <div className="flex-1 mb-6">
-              <label className="uppercase text-sm">Location</label>
-              <input
-                type="text"
-                className="w-full border border-gray-300 bg-white rounded-md px-4 py-2 mt-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                placeholder="Select location"
-              />
-            </div>
-          </div>
-          <div className="mb-6">
-            <label className="uppercase text-sm">Comments / Questions</label>
-            <textarea
-              className="w-full border border-gray-300 bg-white rounded-lg px-4 py-2 mt-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
-              placeholder="Write your description ..."
-              rows="4"
-            />
-          </div>
-          <button
-            type="button"
-            className="w-full md:w-[200px] font-bold bg-sky-500 text-white rounded-full px-5 py-3 hover:bg-sky-700 focus:outline-none focus:ring-2 focus:ring-green-500"
-          >
-            Submit Message
-          </button>
-        </div> */}
-
-        <form
+        <motion.form
+          variants={SlideUp(0.2)}
+          initial="hidden"
+          whileInView={"visible"}
           action="https://getform.io/f/bxooowga"
           method="POST"
           className="w-full md:w-1/2 bg-gray-100 rounded-lg border
@@ -156,11 +96,16 @@ const Contact = () => {
           <button className="bg-blue-500 text-white px-3 py-2 rounded-lg">
             Send Message
           </button>
-        </form>
+        </motion.form>
       </div>
 
       {/* Map Section */}
-      <div className="flex flex-col md:flex-row gap-4 mt-10 px-4 py-5">
+      <motion.div
+        variants={SlideUp(0.2)}
+        initial="hidden"
+        whileInView={"visible"}
+        className="flex flex-col md:flex-row gap-4 mt-10 px-4 py-5"
+      >
         <div className="w-full md:w-1/2">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3650.717576295238!2d90.40253157533724!3d23.79306937864134!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c74ea4ff69b7%3A0x64e7e118b44be1!2sBroadway%20Tours%20%26%20Travels!5e0!3m2!1sen!2sbd!4v1746085615711!5m2!1sen!2sbd"
@@ -181,7 +126,7 @@ const Contact = () => {
           </p>
           <p className="mt-2">01799-224466</p>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 };

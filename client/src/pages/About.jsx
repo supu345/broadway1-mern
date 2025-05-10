@@ -5,6 +5,10 @@ import Jaffar from "../assets/Jaffar.jpg";
 import Avater from "../assets/avatar.jpg";
 import Blogs from "../components/Blogs";
 import banner8 from "../assets/banner/banner8.jpeg";
+import { motion } from "framer-motion";
+import { SlideUp } from "../utility/animation";
+import madina from "../assets/about/madina.jpeg";
+import flower1 from "../assets/about/flower1.jpg";
 
 const About = () => {
   return (
@@ -20,7 +24,9 @@ const About = () => {
         <div className="absolute inset-0 bg-white/80"></div>
 
         <div className="relative flex flex-col items-center">
-          <p className="text-center text-black text-7xl font-bold">About</p>
+          <p className="text-center text-black text-7xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-800 via-blue-300 to-green-500">
+            About
+          </p>
         </div>
 
         {/* <p className="absolute bottom-4 left-4 text-white text-2xl bg-black/80 px-4 py-2 rounded">
@@ -28,14 +34,24 @@ const About = () => {
         </p> */}
       </div>
       <div className="flex flex-row gap-6 mt-[100px] px-4 py-9">
-        <div className="w-1/2">
+        <motion.div
+          initial={{ opacity: 0, scale: 0 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.5, delay: 0.6 }}
+          className="w-1/2"
+        >
           <img
-            src="https://images.pexels.com/photos/19495538/pexels-photo-19495538/free-photo-of-minarets-of-nabawi-mosque-in-medina-saudi-arabia.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2 "
+            src={madina}
             alt="image"
-            className="h-[600px] w-[600px] rounded-xl"
+            className="h-[600px] w-[600px] rounded-xl object-cover"
           />
-        </div>
-        <div className="w-1/2 pl-6 ">
+        </motion.div>
+        <motion.div
+          variants={SlideUp(0.2)}
+          initial="hidden"
+          whileInView={"visible"}
+          className="w-1/2 pl-6 "
+        >
           <button className="border px-4 py-1 rounded-full uppercase font-small">
             Our peace vision
           </button>
@@ -70,15 +86,26 @@ const About = () => {
               </div>
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
       {/* Book Your Hajj Packages Today */}
-      <div className="relative bg-[url('https://img.freepik.com/free-vector/mandala-illustration_53876-75290.jpg?t=st=1745220109~exp=1745223709~hmac=45b9c755e010d42cdc57305aa0a52c8225b67b4f331128d5b020fab680fd137f&w=1380')] bg-cover bg-center bg-no-repeat text-black">
+      <div
+        className="relative bg-cover bg-center bg-no-repeat text-black"
+        style={{
+          backgroundImage: `url(${flower1})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      >
         {/* Black Overlay */}
         {/* <div className="absolute inset-0 bg-black opacity-10"></div> */}
-
         {/* Content */}
-        <div className="relative  flex flex-col py-9">
+        <motion.div
+          variants={SlideUp(0.2)}
+          initial="hidden"
+          whileInView={"visible"}
+          className="relative  flex flex-col py-9"
+        >
           {/* Logo and About Section */}
           <div className="text-center ">
             <div className="flex flex-col gap-3  ">
@@ -109,13 +136,18 @@ const About = () => {
               </div>
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
 
       {/* Book Your Hajj Packages Today */}
 
       <div className="px-9 py-9">
-        <div className="py-6 text-center">
+        <motion.div
+          variants={SlideUp(0.2)}
+          initial="hidden"
+          whileInView={"visible"}
+          className="py-6 text-center"
+        >
           <button className="uppercase border border-amber-950 px-5 py-2 rounded-full font-semibold hover:text-amber-700">
             OUR TEAM MEMBER
           </button>
@@ -131,11 +163,16 @@ const About = () => {
             problem-solving, <br />
             and delivering high-quality results in dynamic environments
           </p>
-        </div>
+        </motion.div>
       </div>
 
       {/* portfolio */}
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-4 px-3">
+      <motion.div
+        variants={SlideUp(0.2)}
+        initial="hidden"
+        whileInView={"visible"}
+        className="grid grid-cols-1 md:grid-cols-4 gap-4 px-3"
+      >
         <div className="text-center">
           <img
             src={mahmud}
@@ -180,7 +217,7 @@ const About = () => {
             <p>Team Leader</p>
           </div>
         </div>
-      </div>
+      </motion.div>
       {/* Blogs */}
       <Blogs />
     </div>

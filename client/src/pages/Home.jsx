@@ -23,6 +23,8 @@ import about1 from "../assets/about/about1.jpeg";
 import about2 from "../assets/about/about2.jpeg";
 import { motion } from "framer-motion";
 import { SlideUp } from "../utility/animation";
+import { SlideLeft } from "../utility/animation";
+import { SlideRight } from "../utility/animation";
 import Services from "../components/Services";
 import FAQ from "../components/faq";
 const Home = () => {
@@ -32,12 +34,17 @@ const Home = () => {
       {/*About */}
       <div className="px-6 py-9 flex flex-col gap-[100px] mb-9 mt-9  md:flex-row">
         {/* Left Section */}
-        <div className="relative w-full md:w-1/2 h-auto">
+        <motion.div
+          initial={{ opacity: 0, scale: 0 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.5, delay: 0.6 }}
+          className="relative w-full md:w-1/2 h-auto"
+        >
           {/* Larger background image */}
           <img
             src={about1}
             alt="photo"
-            className="w-full md:w-[400px] h-[350px] md:h-[550px] object-cover"
+            className="w-full md:w-[570px] h-[350px] md:h-[550px] object-cover"
           />
           <div className="absolute inset-0 bg-black opacity-30"></div>
           {/* Smaller image positioned over the larger one */}
@@ -46,9 +53,14 @@ const Home = () => {
             alt="photo"
             className="absolute w-[200px] md:w-[350px] h-[300px] md:h-[450px] object-cover top-12 md:top-15 left-10 md:left-70 border-[10px] md:border-[20px] border-white shadow-lg "
           />
-        </div>
+        </motion.div>
 
-        <div className="w-full md:w-1/2 mt-6 md:mt-[200px]">
+        <motion.div
+          variants={SlideUp(0.2)}
+          initial="hidden"
+          whileInView={"visible"}
+          className="w-full md:w-1/2 mt-6 md:mt-[200px]"
+        >
           <p className="text-3xl sm:text-4xl md:text-5xl mb-5 font-oswald font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-800 via-blue-300 to-green-500">
             Broadway Tours & Travels Ltd
           </p>
@@ -62,19 +74,31 @@ const Home = () => {
             planning, exclusive deals, and personalized itineraries for every
             traveler.
           </p>
-        </div>
+        </motion.div>
       </div>
       <Pakages />
       <Services />
 
       {/*Dr. Imam Hossain */}
       <div>
-        <div className="text-5xl font-bold px-4">
-          <p>Our distinguished Shariah consultant</p>
-        </div>
+        <motion.div
+          variants={SlideRight(0.4)}
+          initial="hidden"
+          whileInView="visible"
+          className="text-5xl font-bold px-4"
+        >
+          <p className="text-transparent bg-clip-text  bg-gradient-to-r from-blue-600 via-blue-300 to-green-500  ">
+            Our distinguished Shariah consultant
+          </p>
+        </motion.div>
         <div className="px-6 py-9 flex flex-col gap-[20px] mb-9 mt-9  md:flex-row">
           {/* Left Section */}
-          <div className="relative w-full md:w-1/2 h-auto group">
+          <motion.div
+            variants={SlideRight(0.4)}
+            initial="hidden"
+            whileInView="visible"
+            className="relative w-full md:w-1/2 h-auto group"
+          >
             {/* Larger background image */}
             <img
               src={Imam}
@@ -83,14 +107,24 @@ const Home = () => {
             />
 
             {/* Smaller image positioned over the larger one */}
-          </div>
+          </motion.div>
 
-          <div className="w-full md:w-1/2 mt-6 md:mt-[200px]">
+          <motion.div
+            variants={SlideLeft(0.6)}
+            initial="hidden"
+            whileInView="visible"
+            className="w-full md:w-1/2 mt-6 md:mt-[200px]"
+          >
             <p className="text-3xl sm:text-4xl md:text-5xl mb-5 font-oswald font-bold ">
               Dr. Mufti Imam Hossain
             </p>
 
-            <p className="text-base sm:text-lg">
+            <p
+              variants={SlideUp(0.4)}
+              initial="hidden"
+              whileInView={"visible"}
+              className="text-base sm:text-lg"
+            >
               Dr. Mufti Imam Hossain, Associate Professor, is a renowned
               Bangladeshi Islamic scholar and researcher. He is a Ph.D. holder
               in Islamic Studies and has authored several books on Islamic
@@ -101,14 +135,26 @@ const Home = () => {
               research work. His expertise spans a wide range of topics,
               including Islamic law, history, and culture.
             </p>
-          </div>
+          </motion.div>
         </div>
       </div>
 
       <div className="px-6 mt-5">
-        <p className="text-5xl font-bold  text-center">Our Gallery</p>
+        <motion.p
+          variants={SlideUp(0.2)}
+          initial="hidden"
+          whileInView={"visible"}
+          className="text-5xl font-bold  text-center"
+        >
+          Our Gallery
+        </motion.p>
 
-        <div className="dark:bg-black dark:text-white">
+        <motion.div
+          variants={SlideUp(0.4)}
+          initial="hidden"
+          whileInView={"visible"}
+          className="dark:bg-black dark:text-white"
+        >
           <div className="container py-[40px] px-[40px] grid grid-cols-1 md:grid-cols-4  gap-[40px] mt-8">
             <div className="h-[280px]">
               <img
@@ -167,7 +213,7 @@ const Home = () => {
               />
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
       <Testimonial />
 

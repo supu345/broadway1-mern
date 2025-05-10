@@ -2,6 +2,9 @@ import React from "react";
 import Pakages from "../components/pakages";
 import { Link } from "react-router-dom";
 import banner6 from "../assets/banner/banner6.jpeg";
+import { motion } from "framer-motion";
+import { SlideUp } from "../utility/animation";
+import flower from "../assets/blog/flower.jpeg";
 const HajjPackages = () => {
   return (
     <div>
@@ -21,7 +24,12 @@ const HajjPackages = () => {
           </Link>
         </p>
       </div>
-      <div className="px-8">
+      <motion.div
+        variants={SlideUp(0.2)}
+        initial="hidden"
+        whileInView={"visible"}
+        className="px-8"
+      >
         <p className="text-3xl font-bold py-9">
           Hajj Packages 2025 from Bangladesh
         </p>
@@ -38,18 +46,35 @@ const HajjPackages = () => {
           Register your Hajj package and take the first step towards religious
           journey.
         </p>
-      </div>
+      </motion.div>
 
-      <div className="px-8 bg-green-400  bg-[url('https://images.pexels.com/photos/1037998/pexels-photo-1037998.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2')]">
-        <p className="text-3xl font-bold pt-7">
+      <div
+        className="px-8 "
+        style={{
+          backgroundImage: `url(${flower})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      >
+        <motion.p
+          variants={SlideUp(0.2)}
+          initial="hidden"
+          whileInView={"visible"}
+          className="text-3xl font-bold pt-7"
+        >
           Book Your Hajj Package 2025 from Bangladesh
-        </p>
-        <p className="py-6">
+        </motion.p>
+        <motion.p
+          variants={SlideUp(0.4)}
+          initial="hidden"
+          whileInView={"visible"}
+          className="py-6"
+        >
           Our popular Hajj packages for 2025 have been meticulously crafted to
           ensure a seamless and memorable journey. We prioritize our member's
           comfort, safety, and well-being throughout their Hajj pilgrimage,
           providing a worry-free experience.
-        </p>
+        </motion.p>
         <div>
           <Pakages />
         </div>

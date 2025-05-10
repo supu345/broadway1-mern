@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { SlideUp } from "../utility/animation";
-import { FaPhoneAlt } from "react-icons/fa";
-import { FaAngleRight } from "react-icons/fa";
+
+import Faq from "../assets/blog/fag.jpeg";
+
 const FAQ = () => {
-  const [activeIndex, setActiveIndex] = useState(0); // Default to first item open
+  const [activeIndex, setActiveIndex] = useState(null); // Default to first item open
   const faqs = [
     {
       question: "What is the difference between Hajj and Umrah?",
@@ -65,16 +66,19 @@ const FAQ = () => {
     <div
       className="px-6 py-9 relative  "
       style={{
-        backgroundImage:
-          "url('https://images.pexels.com/photos/11183364/pexels-photo-11183364.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2')",
+        backgroundImage: `url(${Faq})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
-        backgroundRepeat: "no-repeat",
       }}
     >
       <div className="absolute inset-0 bg-white/80"></div>
 
-      <div className="text-center relative">
+      <motion.div
+        variants={SlideUp(0.2)}
+        initial="hidden"
+        whileInView={"visible"}
+        className="text-center relative"
+      >
         <p>
           <button className=" p-2 px-4  mb-8">FAQs</button>
         </p>
@@ -91,10 +95,15 @@ const FAQ = () => {
             travel. Plan confidently with our detailed FAQ section.
           </p>
         </p>
-      </div>
+      </motion.div>
 
-      <div className="grid grid-cols-2 gap-6 p-10 relative">
-        <div className="">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 p-10 relative">
+        <motion.div
+          variants={SlideUp(0.4)}
+          initial="hidden"
+          whileInView={"visible"}
+          className=""
+        >
           {faqs.slice(0, 5).map((faq, index) => (
             <div
               key={index}
@@ -116,8 +125,13 @@ const FAQ = () => {
               )}
             </div>
           ))}
-        </div>
-        <div className="">
+        </motion.div>
+        <motion.div
+          variants={SlideUp(0.6)}
+          initial="hidden"
+          whileInView={"visible"}
+          className=""
+        >
           {faqs.slice(5).map((faq, index) => (
             <div
               key={index + 5}
@@ -139,7 +153,7 @@ const FAQ = () => {
               )}
             </div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </div>
   );

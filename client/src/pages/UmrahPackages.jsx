@@ -1,16 +1,12 @@
 import React from "react";
 import UmrahPkg from "../components/UmrahPkg";
-import { CgCalendarDates } from "react-icons/cg";
-import { IoDocumentTextOutline } from "react-icons/io5";
-import { RiHotelLine } from "react-icons/ri";
-import { MdNoMeals } from "react-icons/md";
-import { RiPassportLine } from "react-icons/ri";
-import { FaAngleRight } from "react-icons/fa";
 import { MdDoubleArrow } from "react-icons/md";
 import { Link } from "react-router-dom";
-import { FaArrowRightLong } from "react-icons/fa6";
+import { motion } from "framer-motion";
+import { SlideUp } from "../utility/animation";
 import Package8 from "../assets/packages/packages8.jpeg";
 import banner7 from "../assets/banner/banner7.jpeg";
+
 const UmrahPackages = () => {
   return (
     <div>
@@ -31,7 +27,12 @@ const UmrahPackages = () => {
           </Link>
         </p>
       </div>
-      <div className="px-8 ">
+      <motion.div
+        variants={SlideUp(0.2)}
+        initial="hidden"
+        whileInView={"visible"}
+        className="px-8 "
+      >
         <p className="text-3xl font-bold py-9">
           Fully Guided Umrah Package 2025 from Bangladesh
         </p>
@@ -47,8 +48,13 @@ const UmrahPackages = () => {
         <div>
           <UmrahPkg />
         </div>
-      </div>
-      <div className="px-9 py-9">
+      </motion.div>
+      <motion.div
+        variants={SlideUp(0.4)}
+        initial="hidden"
+        whileInView={"visible"}
+        className="px-9 py-9"
+      >
         <h1 className="line-clamp-1 font-bold text-3xl mb-4">
           Book Umrah Online: One-stop solution from Bangladesh
         </h1>
@@ -161,7 +167,7 @@ const UmrahPackages = () => {
             </div>
           </div>
         </div> */}
-      </div>
+      </motion.div>
     </div>
   );
 };
