@@ -20,9 +20,7 @@ const Blog = () => {
       >
         <div className="absolute inset-0 bg-black/40"></div>
         <div className="relative flex flex-col items-center">
-          <p className="text-center text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-800 via-blue-300 to-green-500 leading-tight">
-            Blog
-          </p>
+          <p className="text-center text-5xl font-bold text-white">Blog</p>
         </div>
       </motion.div>
 

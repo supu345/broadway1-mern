@@ -65,27 +65,30 @@ const Headers = ({ handleOrderPopup }) => {
           <div className="flex justify-between items-center">
             {/* Logo and Brand Name */}
             <div className="flex items-center gap-2 font-bold text-2xl">
-              <Link to={"/"} onClick={() => window.scrollTo(0, 0)}>
+              <Link to="/" onClick={() => window.scrollTo(0, 0)}>
                 <div className="flex items-center gap-2 py-2">
-                  <Link to="/">
-                    <div className="flex flex-row items-center justify-center md:justify-start">
-                      <img
-                        className="w-[100px] h-[60px]"
-                        src={logo}
-                        alt="logo"
-                      />
-                    </div>
-                  </Link>
+                  <div className="flex flex-row items-center justify-center md:justify-start">
+                    <img
+                      className="w-[100px] h-[60px]"
+                      src={logo}
+                      alt="Company Logo"
+                    />
+                  </div>
                 </div>
               </Link>
             </div>
 
             {/* Navbar Links */}
             <div className="hidden md:block">
-              <ul className="flex items-center gap-4   space-x-6 font-bold text-gray-600">
+              <ul className="flex items-center gap-4 space-x-6 font-bold text-gray-600">
                 {NavbarLinks.map((data) => (
                   <li className="py-4" key={data.name}>
-                    <NavLink to={data.link} activeClassName="active">
+                    <NavLink
+                      to={data.link}
+                      className={({ isActive }) =>
+                        isActive ? "text-blue-600 font-bold" : "text-gray-600"
+                      }
+                    >
                       {data.name}
                     </NavLink>
                   </li>
@@ -95,15 +98,17 @@ const Headers = ({ handleOrderPopup }) => {
 
             {/* Buttons and Hamburger */}
             <div className="flex items-center gap-2 text-xl">
-              <Link
-                to="https://web.whatsapp.com/"
+              {/* WhatsApp Icon */}
+              <a
+                href="https://wa.me/01730702545?text=Hello%20I%20want%20to%20know%20more%20about%20your%20services."
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Contact us on WhatsApp"
               >
                 <FaWhatsapp className="hover:text-blue-700 text-white text-3xl bg-green-600 rounded-full p-1" />
-              </Link>
+              </a>
 
-              {/* Mobile Hamburger icon */}
+              {/* Mobile Hamburger Icon */}
               <div className="md:hidden block">
                 {showMenu ? (
                   <HiMenuAlt1

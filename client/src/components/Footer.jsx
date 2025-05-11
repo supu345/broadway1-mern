@@ -26,7 +26,7 @@ const Footer = () => {
     <footer className="relative bg-[url('https://images.pexels.com/photos/4346403/pexels-photo-4346403.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2')] bg-cover bg-center bg-no-repeat text-white">
       {/* Black Overlay */}
 
-      <div className="absolute inset-0 bg-black opacity-80"></div>
+      <div className="absolute inset-0 bg-gradient-to-tr from-blue-500 to-green-500 opacity-80"></div>
 
       <motion.div
         variants={SlideUp(0.5)}
@@ -42,9 +42,8 @@ const Footer = () => {
                 <img className="w-[100px] h-[70px]" src={logo} alt="logo" />
               </div>
               <p>
-                Broadway Tours & Travels ensures seamless and memorable
-                journeys, specializing in exceptional Hajj and Umrah services
-                with care and expertise.
+                “Your Sacred Journey Begins with Broadway — With Authentic
+                Sunnah-Based Guidance."
               </p>
             </div>
             <div className="flex justify-center md:justify-start items-center h-[50px] text-gray-200">
@@ -83,7 +82,7 @@ const Footer = () => {
           {/* Useful Links Section */}
           <div className="text-center md:w-3/12 sm:text-center md:text-left">
             <div className="flex flex-col gap-3">
-              <p className="font-bold text-lg mb-2 mt-6">Useful Links</p>
+              <p className="font-bold text-lg mb-2 mt-6">Quick Links</p>
               <ul className="flex flex-col gap-2 text-white">
                 <li>
                   <Link to="/">Home</Link>

@@ -61,7 +61,7 @@ const Pakages = () => {
           </div>
           <div className="w-full md:w-3/5">
             <p className="text-2xl sm:text-3xl md:text-4xl font-bold mt-6 text-gray-800">
-              Economy Hajj Package
+              Economy/Standard Hajj Package (Shifting)
             </p>
             <p className="font-medium mt-6">
               Committed to delivering outstanding service, ensuring your journey
@@ -73,7 +73,9 @@ const Pakages = () => {
             <div>
               <div className="flex flex-row gap-4 items-center mt-6">
                 <BsFillBuildingsFill className="text-sky-700 text-lg md:text-xl" />
-                <p className="font-medium">Mecca - Hotel (selected)</p>
+                <p className="font-medium">
+                  Azizia, Mecca, Madina - Hotel (Economy)
+                </p>
               </div>
 
               <div className="flex flex-col sm:flex-row gap-6 items-start mt-6">
@@ -130,7 +132,7 @@ const Pakages = () => {
           {/* Left Section */}
           <div className="w-full md:w-3/5">
             <p className="text-2xl sm:text-3xl md:text-4xl font-bold mt-6 text-gray-800">
-              Premium Hajj Package
+              Standard Hajj Package (Shifting)
             </p>
             <p className="font-medium mt-6">
               Committed to delivering outstanding service, ensuring your journey
@@ -142,7 +144,9 @@ const Pakages = () => {
             <div>
               <div className="flex flex-row gap-4 items-center mt-6">
                 <BsFillBuildingsFill className="text-sky-700 text-lg md:text-xl" />
-                <p className="font-medium">Mecca - Hotel (selected)</p>
+                <p className="font-medium">
+                  Azizia, Mecca, Madina - Hotel (Standard)
+                </p>
               </div>
 
               <div className="flex flex-col sm:flex-row gap-6 items-start mt-6">
@@ -215,7 +219,7 @@ const Pakages = () => {
           </div>
           <div className="w-full md:w-3/5">
             <p className="text-2xl sm:text-3xl md:text-4xl font-bold mt-6 text-gray-800">
-              Premium Hajj Package(regular)
+              Premium/Platinum Hajj Package(Shifting)
             </p>
             <p className="font-medium mt-6">
               Committed to delivering outstanding service, ensuring your journey
@@ -227,13 +231,15 @@ const Pakages = () => {
             <div>
               <div className="flex flex-row gap-4 items-center mt-6">
                 <BsFillBuildingsFill className="text-sky-700 text-lg md:text-xl" />
-                <p className="font-medium">Mecca - Hotel (selected)</p>
+                <p className="font-medium">
+                  Azizia, Mecca, Madina - Hotel (Selected 5*/4*)
+                </p>
               </div>
 
               <div className="flex flex-col sm:flex-row gap-6 items-start mt-6">
                 <div className="flex flex-row gap-4 items-center">
                   <FaRegCalendar className="text-sky-700 text-lg md:text-xl" />
-                  <p className="font-medium">35-40 days</p>
+                  <p className="font-medium">35-40, 26-30, 20-22, 12-15 days</p>
                 </div>
                 <div className="flex flex-row gap-4 items-center">
                   <FaHamburger className="text-sky-700 text-lg md:text-xl" />
