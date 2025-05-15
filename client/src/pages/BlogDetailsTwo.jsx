@@ -1,9 +1,18 @@
 import React from "react";
 import Photo1 from "../assets/blog1.jpg";
 import blog1 from "../assets/blog/blog1.jpeg";
+import { Helmet } from "react-helmet";
 const BlogDetailsTwo = () => {
   return (
     <div>
+      <Helmet>
+        <title>BlogDetailsTwo - Hajj Travel Agency</title>
+        <meta
+          name="description"
+          content="Explore the best Hajj and Umrah packages with our trusted travel agency."
+        />
+        <link rel="canonical" href="https://broadwayhajj.com" />
+      </Helmet>
       <div
         className="relative bg-fixed h-[300px] bg-cover bg-center flex items-center justify-center"
         style={{

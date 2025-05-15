@@ -18,9 +18,18 @@ import Hajj16 from "../assets/hajj2024-16.jpg";
 import banner4 from "../assets/packages/banner4.jpeg";
 import { motion } from "framer-motion";
 import { SlideUp } from "../utility/animation";
+import { Helmet } from "react-helmet";
 const Gallery = () => {
   return (
     <div>
+      <Helmet>
+        <title>Gallery - Hajj Travel Agency</title>
+        <meta
+          name="description"
+          content="Explore the best Hajj and Umrah packages with our trusted travel agency."
+        />
+        <link rel="canonical" href="https://broadwayhajj.com" />
+      </Helmet>
       {/* Top Section */}
       <div
         className="relative bg-fixed h-[300px] bg-cover bg-center flex items-center justify-center"
@@ -32,7 +41,7 @@ const Gallery = () => {
       >
         <div className="absolute inset-0 bg-white/80"></div>
         <div className="relative flex flex-col items-center">
-          <p className="text-center  text-4xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-800 via-blue-300 to-green-500">
+          <p className="text-center  text-4xl md:text-5xl lg:text-7xl font-bold text-blue-600">
             Gallery
           </p>
         </div>

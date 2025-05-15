@@ -27,9 +27,19 @@ import { SlideLeft } from "../utility/animation";
 import { SlideRight } from "../utility/animation";
 import Services from "../components/Services";
 import FAQ from "../components/faq";
+import { Helmet } from "react-helmet";
 const Home = () => {
   return (
     <div>
+      <Helmet>
+        <title>Home - Hajj Travel Agency</title>
+        <meta
+          name="description"
+          content="Explore the best Hajj and Umrah packages with our trusted travel agency."
+        />
+        <link rel="canonical" href="https://broadwayhajj.com" />
+      </Helmet>
+
       <Hero />
       {/*About */}
       <div className="px-6 py-9 flex flex-col gap-[100px] mb-9 mt-9  md:flex-row">
@@ -80,71 +90,70 @@ const Home = () => {
       <Services />
 
       {/*Dr. Imam Hossain */}
-      <div>
+      <div className="w-full px-4 lg:px-12 xl:px-24 2xl:px-40 max-w-[1920px] mx-auto py-12">
+        {/* Title */}
         <motion.div
           variants={SlideRight(0.4)}
           initial="hidden"
           whileInView="visible"
-          className="text-5xl font-bold px-4"
+          className="text-center"
         >
-          <p className="text-transparent bg-clip-text  bg-gradient-to-r from-blue-600 via-blue-300 to-green-500  ">
+          <h2 className="text-3xl sm:text-5xl md:text-3xl xl:text-5xl capitalize font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-blue-300 to-green-500">
             Our distinguished Shariah consultant
-          </p>
+          </h2>
         </motion.div>
-        <div className="px-6 py-9 flex flex-col gap-[20px] mb-9 mt-9  md:flex-row">
-          {/* Left Section */}
+
+        {/* Content */}
+        <div className="mt-12 flex flex-col lg:flex-row gap-10 items-center">
+          {/* Image Section */}
           <motion.div
             variants={SlideRight(0.4)}
             initial="hidden"
             whileInView="visible"
-            className="relative w-full md:w-1/2 h-auto group"
+            className="w-full lg:w-1/2"
           >
-            {/* Larger background image */}
-            <img
-              src={Imam}
-              alt="photo"
-              className="w-full md:w-[500px] h-[350px] md:h-[550px]  object-cover transition-transform duration-500 group-hover:scale-105 group-hover:brightness-90"
-            />
-
-            {/* Smaller image positioned over the larger one */}
+            <div className="relative group">
+              <img
+                src={Imam}
+                alt="Dr. Mufti Imam Hossain"
+                className="w-full h-[300px] sm:h-[400px] lg:h-[550px] object-cover rounded-xl transition-transform duration-500 group-hover:scale-105 group-hover:brightness-90 shadow-lg"
+              />
+            </div>
           </motion.div>
 
+          {/* Text Section */}
           <motion.div
             variants={SlideLeft(0.6)}
             initial="hidden"
             whileInView="visible"
-            className="w-full md:w-1/2 mt-6 md:mt-[200px]"
+            className="w-full lg:w-1/2"
           >
-            <p className="text-3xl sm:text-4xl md:text-5xl mb-5 font-oswald font-bold ">
+            <h3 className="text-2xl sm:text-4xl xl:text-5xl font-bold mb-6 font-oswald">
               Dr. Mufti Imam Hossain
-            </p>
-
-            <p
+            </h3>
+            <motion.p
               variants={SlideUp(0.4)}
               initial="hidden"
-              whileInView={"visible"}
-              className="text-base sm:text-lg"
+              whileInView="visible"
+              className="text-base sm:text-lg xl:text-xl leading-relaxed text-gray-700"
             >
               Dr. Mufti Imam Hossain, Associate Professor, is a renowned
-              Bangladeshi Islamic scholar and researcher. He is a Ph.D. holder
-              in Islamic Studies and has authored several books on Islamic
-              theology and jurisprudence. Dr. Hossain has also made significant
-              contributions to the field of Islamic finance and economics. He
-              has served as a faculty member at various prestigious institutions
-              in Bangladesh and has received several awards for his academic and
-              research work. His expertise spans a wide range of topics,
-              including Islamic law, history, and culture.
-            </p>
+              Bangladeshi Islamic scholar and researcher. He holds a Ph.D. in
+              Islamic Studies and has authored several books on Islamic theology
+              and jurisprudence. He has also contributed significantly to
+              Islamic finance and economics, and has taught at various
+              prestigious institutions across Bangladesh. His academic expertise
+              spans Islamic law, history, and culture.
+            </motion.p>
           </motion.div>
         </div>
       </div>
-
       <div className="px-6 mt-5">
         <motion.p
           variants={SlideUp(0.2)}
           initial="hidden"
           whileInView={"visible"}
-          className="text-5xl font-bold  text-center"
+          className="text-5xl font-bold lg:7xl text-center"
         >
           Our Gallery
         </motion.p>
@@ -153,13 +162,13 @@ const Home = () => {
           variants={SlideUp(0.4)}
           initial="hidden"
           whileInView={"visible"}
-          className="dark:bg-black dark:text-white"
+          className=""
         >
           <div className="container py-[40px] px-[40px] grid grid-cols-1 md:grid-cols-4  gap-[40px] mt-8">
             <div className="h-[280px]">
               <img
                 src={Hajj1}
-                className="w-full h-full object-cover border p-1 transform transition duration-300 ease-in-out hover:scale-110"
+                className="w-full h-full  object-cover border p-1 transform transition duration-300 ease-in-out hover:scale-110"
                 alt="Image 1"
               />
             </div>

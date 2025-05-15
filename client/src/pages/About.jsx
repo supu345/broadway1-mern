@@ -9,10 +9,20 @@ import { motion } from "framer-motion";
 import { SlideUp } from "../utility/animation";
 import madina from "../assets/about/madina.jpeg";
 import flower1 from "../assets/about/flower1.jpg";
-
+import { FaFacebookF, FaTwitter, FaLinkedinIn } from "react-icons/fa";
+import Imam from "../assets/imam_hossain1.jpg";
+import { Helmet } from "react-helmet";
 const About = () => {
   return (
     <div>
+      <Helmet>
+        <title>About - Hajj Travel Agency</title>
+        <meta
+          name="description"
+          content="Explore the best Hajj and Umrah packages with our trusted travel agency."
+        />
+        <link rel="canonical" href="https://broadwayhajj.com" />
+      </Helmet>
       <div
         className="relative bg-fixed h-[300px] bg-cover bg-center flex items-center justify-center"
         style={{
@@ -24,21 +34,17 @@ const About = () => {
         <div className="absolute inset-0 bg-white/80"></div>
 
         <div className="relative flex flex-col items-center">
-          <p className="text-center text-black text-7xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-800 via-blue-300 to-green-500">
+          <p className="text-center  text-7xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-800 via-blue-300 to-green-500">
             About
           </p>
         </div>
-
-        {/* <p className="absolute bottom-4 left-4 text-white text-2xl bg-black/80 px-4 py-2 rounded">
-          Home / HajjPackages
-        </p> */}
       </div>
-      <div className="flex flex-row gap-6 mt-[100px] px-4 py-9">
+      <div className="flex flex-col md:flex-row gap-6 mt-[100px] px-4 py-9">
         <motion.div
           initial={{ opacity: 0, scale: 0 }}
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5, delay: 0.6 }}
-          className="w-1/2"
+          className="w-full md:w-1/2"
         >
           <img
             src={madina}
@@ -50,12 +56,12 @@ const About = () => {
           variants={SlideUp(0.2)}
           initial="hidden"
           whileInView={"visible"}
-          className="w-1/2 pl-6 "
+          className="w-full md:w-1/2 pl-6 "
         >
           <button className="border px-4 py-1 rounded-full uppercase font-small">
             Our peace vision
           </button>
-          <p className="text-5xl font-bold mt-6">
+          <p className="text-5xl font-bold mt-6 text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-blue-300 to-green-500">
             Hajj & Umrah Experiences: Tailored To Travel Solutions.
           </p>
           <div className="flex flex-row gap-2 mt-[50px] ">
@@ -68,7 +74,7 @@ const About = () => {
             </div>
             <div className="w-1/2">
               <div>
-                <p className="text-3xl font-bold">Our Vision</p>
+                <p className="text-3xl font-bold text-green-500">Our Vision</p>
 
                 <p>
                   We understand the significance of hajj and umrah in the lives
@@ -77,7 +83,7 @@ const About = () => {
               </div>
 
               <div className="mt-7">
-                <p className="text-3xl font-bold">Our Mission</p>
+                <p className="text-3xl font-bold text-green-500">Our Mission</p>
 
                 <p>
                   We understand the significance of hajj and umrah in the lives
@@ -166,57 +172,116 @@ const About = () => {
         </motion.div>
       </div>
 
-      {/* portfolio */}
       <motion.div
         variants={SlideUp(0.2)}
         initial="hidden"
         whileInView={"visible"}
-        className="grid grid-cols-1 md:grid-cols-4 gap-4 px-3"
+        className="grid sm:grid-cols-1  md:grid-cols-2 gap-[80px] px-[48px] mt-12"
       >
-        <div className="text-center">
+        {/*1 */}
+        <div className="relative h-[500px] group">
           <img
             src={mahmud}
-            alt="image"
-            className="rounded-xl h-[350px] w-full object-cover"
+            alt="image1"
+            className="w-full h-[500px] object-cover"
           />
-          <div className="border border-gray-200 mt-4 py-5 rounded-xl">
-            <p className="text-2xl font-medium ">mahmud</p>
-            {/* <p>Operations Manager</p> */}
+          <div className="absolute inset-0 bg-black/40 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            <p className="text-white text-2xl font-bold">Mahmudur Rahman</p>
+            <p className="text-white mt-2">
+              Director, Broadway Tours & Travels
+            </p>
+            <div className="flex mt-4 space-x-4">
+              <a
+                href="#"
+                className="text-white text-xl p-2 rounded-full bg-gray-800 hover:bg-blue-600 transition"
+              >
+                <FaFacebookF />
+              </a>
+              <a
+                href="#"
+                className="text-white text-xl p-2 rounded-full bg-gray-800 hover:bg-blue-400 transition"
+              >
+                <FaTwitter />
+              </a>
+              <a
+                href="#"
+                className="text-white text-xl p-2 rounded-full bg-gray-800 hover:bg-blue-700 transition"
+              >
+                <FaLinkedinIn />
+              </a>
+            </div>
           </div>
         </div>
-        <div className="text-center">
+        {/*2 */}
+        <div className="relative h-[500px] group">
           <img
             src={Jaffar}
-            alt="image"
-            className="rounded-xl h-[350px] w-full object-cover"
+            alt="image1"
+            className="w-full h-[500px] object-cover"
           />
-          <div className="border border-gray-200 mt-4 py-5 rounded-xl">
-            <p className="text-2xl font-medium ">Emily Carter</p>
-            <p>Operations Manager</p>
+          <div className="absolute inset-0 bg-black/40 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            <p className="text-white text-2xl font-bold">Jaffar S Chowdhury</p>
+            <p className="text-white mt-2">
+              Managing Director, Broadway Tours & Travels
+            </p>
+            <div className="flex mt-4 space-x-4">
+              <a
+                href="#"
+                className="text-white text-xl p-2 rounded-full bg-gray-800 hover:bg-blue-600 transition"
+              >
+                <FaFacebookF />
+              </a>
+              <a
+                href="#"
+                className="text-white text-xl p-2 rounded-full bg-gray-800 hover:bg-blue-400 transition"
+              >
+                <FaTwitter />
+              </a>
+              <a
+                href="#"
+                className="text-white text-xl p-2 rounded-full bg-gray-800 hover:bg-blue-700 transition"
+              >
+                <FaLinkedinIn />
+              </a>
+            </div>
           </div>
         </div>
-        <div className="text-center">
+        {/*3 */}
+
+        {/* <div className="relative h-[400px] group">
           <img
-            src={Avater}
-            alt="image"
-            className="rounded-xl h-[350px] w-full object-cover"
+            src={Imam}
+            alt="image1"
+            className="w-full h-[400px] object-cover"
           />
-          <div className="border border-gray-200 mt-4 py-5 rounded-xl">
-            <p className="text-2xl font-medium ">monir</p>
-            <p>Quality Control Supervisor</p>
+          <div className="absolute inset-0 bg-black/40 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            <p className="text-white text-2xl font-bold">Dr. Imam Hossain</p>
+            <p className="text-white mt-2">Associate Professor</p>
+            <p className="text-white mt-2">
+              Dept. of Islamic Studies, National University
+            </p>
+            <div className="flex mt-4 space-x-4">
+              <a
+                href="#"
+                className="text-white text-xl p-2 rounded-full bg-gray-800 hover:bg-blue-600 transition"
+              >
+                <FaFacebookF />
+              </a>
+              <a
+                href="#"
+                className="text-white text-xl p-2 rounded-full bg-gray-800 hover:bg-blue-400 transition"
+              >
+                <FaTwitter />
+              </a>
+              <a
+                href="#"
+                className="text-white text-xl p-2 rounded-full bg-gray-800 hover:bg-blue-700 transition"
+              >
+                <FaLinkedinIn />
+              </a>
+            </div>
           </div>
-        </div>
-        <div className="text-center">
-          <img
-            src={Avater}
-            alt="image"
-            className="rounded-xl h-[350px] w-full object-cover"
-          />
-          <div className="border border-gray-200 mt-4 py-5 rounded-xl">
-            <p className="text-2xl font-medium ">Selim</p>
-            <p>Team Leader</p>
-          </div>
-        </div>
+        </div> */}
       </motion.div>
       {/* Blogs */}
       <Blogs />

@@ -60,7 +60,7 @@ const Testimonial = () => {
   ];
   return (
     <div className="px-6 py-9">
-      <div className="flex flex-col lg:flex-row gap-6 lg:gap-3 mt-7">
+      <div className="flex flex-col lg:flex-row md:gap-6 lg:gap-3 mt-7">
         <motion.div
           variants={SlideRight(0.4)}
           initial="hidden"

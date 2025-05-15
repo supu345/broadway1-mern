@@ -27,51 +27,53 @@ const Pakages = () => {
           variants={SlideUp(0.2)}
           initial="hidden"
           whileInView={"visible"}
-          className="text-center"
+          className="text-center px-4 sm:px-6 md:px-12 lg:px-20 xl:px-32"
         >
-          <button className="border p-2 px-4 rounded-full mb-8 uppercase">
-            our Packages
+          <button className="border border-blue-500 p-2 px-4 rounded-full mb-8 uppercase text-sm lg:2xl sm:text-base hover:bg-blue-500 hover:text-white transition">
+            Our Packages
           </button>
 
-          <p className="text-5xl font-bold  text-center">
+          <p className="sm:text-2xl font-bold md:text-5xl lg:text-7xl">
             Explore Our
             <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-blue-300 to-green-500">
               Hajj Umrah Packages
             </span>
           </p>
-          <p className="py-7 font-medium">
+
+          <p className="py-5 sm:py-6 lg:py-7 text-sm sm:text-base md:text-lg lg:text-2xl font-medium">
             Explore tailored Hajj and Umrah packages designed to provide a
-            seamless spiritual journey with comfort, guidance, and convenience
+            seamless spiritual journey with comfort, guidance, and convenience.
           </p>
         </motion.div>
+
         {/* pkg-1 */}
         <motion.div
           variants={SlideUp(0.4)}
           initial="hidden"
           whileInView={"visible"}
-          className="flex flex-col md:flex-row gap-9  bg-linear-to-r from-white to-green-100 rounded-lg border border-gray-200 p-5"
+          className="flex flex-col md:flex-row gap-9 lg:h-[650px]  bg-linear-to-r from-white to-green-100 rounded-lg border border-gray-200 p-5"
         >
           <div className="w-full md:w-2/5 group">
             <img
               src={about2}
               alt="VIP Umrah Package"
-              className="w-full h-[300px] md:h-[500px] rounded-lg object-cover transition-transform duration-500 group-hover:scale-105 group-hover:brightness-90"
+              className="w-full h-[300px] md:h-[500px] lg:h-[600px] lg:mb-6   rounded-lg object-cover transition-transform duration-500 group-hover:scale-105 group-hover:brightness-90"
             />
           </div>
           <div className="w-full md:w-3/5">
-            <p className="text-2xl sm:text-3xl md:text-4xl font-bold mt-6 text-gray-800">
+            <p className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mt-6 text-gray-800">
               Economy/Standard Hajj Package (Shifting)
             </p>
-            <p className="font-medium mt-6">
+            <p className="font-medium lg:text-3xl mt-6">
               Committed to delivering outstanding service, ensuring your journey
               is seamless from the initial inquiry to the final step.
             </p>
             <div className="border border-gray-300 mt-6 md:mt-12 w-full md:w-[600px]"></div>
 
             {/* Features Section */}
-            <div>
-              <div className="flex flex-row gap-4 items-center mt-6">
+            <div className="lg:text-3xl">
+              <div className="flex flex-row gap-4 items-center   mt-6">
                 <BsFillBuildingsFill className="text-sky-700 text-lg md:text-xl" />
                 <p className="font-medium">
                   Azizia, Mecca, Madina - Hotel (Economy)
@@ -127,21 +129,21 @@ const Pakages = () => {
           variants={SlideUp(0.4)}
           initial="hidden"
           whileInView={"visible"}
-          className="flex flex-col md:flex-row mt-5 gap-9 bg-gradient-to-r from-green-100 to-white rounded-lg border border-gray-200 p-5"
+          className="flex flex-col md:flex-row lg:h-[650px] lg:mb-6   mt-5 gap-9 bg-gradient-to-r from-green-100 to-white rounded-lg border border-gray-200 p-5"
         >
           {/* Left Section */}
           <div className="w-full md:w-3/5">
-            <p className="text-2xl sm:text-3xl md:text-4xl font-bold mt-6 text-gray-800">
+            <p className="text-2xl sm:text-3xl md:text-4xl  lg:text-5xl font-bold mt-6 text-gray-800">
               Standard Hajj Package (Shifting)
             </p>
-            <p className="font-medium mt-6">
+            <p className="font-medium mt-6  lg:text-3xl">
               Committed to delivering outstanding service, ensuring your journey
               is seamless from the initial inquiry to the final step.
             </p>
             <div className="border border-gray-300 mt-6 md:mt-12 w-full md:w-[600px]"></div>
 
             {/* Features Section */}
-            <div>
+            <div className="lg:text-3xl">
               <div className="flex flex-row gap-4 items-center mt-6">
                 <BsFillBuildingsFill className="text-sky-700 text-lg md:text-xl" />
                 <p className="font-medium">
@@ -198,7 +200,7 @@ const Pakages = () => {
             <img
               src={packages1}
               alt="VIP Umrah Package"
-              className="w-full h-[300px] md:h-[500px] rounded-lg object-cover transition-transform duration-500 group-hover:scale-105 group-hover:brightness-90"
+              className="w-full h-[300px] md:h-[500px] lg:h-[600px] rounded-lg object-cover transition-transform duration-500 group-hover:scale-105 group-hover:brightness-90"
             />
           </div>
         </motion.div>
@@ -214,21 +216,21 @@ const Pakages = () => {
             <img
               src={packages3}
               alt="VIP Umrah Package"
-              className="w-full h-[300px] md:h-[500px] rounded-lg object-cover transition-transform duration-500 group-hover:scale-105 group-hover:brightness-90"
+              className="w-full h-[300px] md:h-[500px] lg:h-[600px] rounded-lg object-cover transition-transform duration-500 group-hover:scale-105 group-hover:brightness-90"
             />
           </div>
           <div className="w-full md:w-3/5">
-            <p className="text-2xl sm:text-3xl md:text-4xl font-bold mt-6 text-gray-800">
+            <p className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mt-6 text-gray-800">
               Premium/Platinum Hajj Package(Shifting)
             </p>
-            <p className="font-medium mt-6">
+            <p className="font-medium mt-6 lg:text-3xl">
               Committed to delivering outstanding service, ensuring your journey
               is seamless from the initial inquiry to the final step.
             </p>
             <div className="border border-gray-300 mt-6 md:mt-12 w-full md:w-[600px]"></div>
 
             {/* Features Section */}
-            <div>
+            <div className="lg:text-3xl">
               <div className="flex flex-row gap-4 items-center mt-6">
                 <BsFillBuildingsFill className="text-sky-700 text-lg md:text-xl" />
                 <p className="font-medium">
@@ -289,17 +291,17 @@ const Pakages = () => {
         >
           {/* Left Section */}
           <div className="w-full md:w-3/5">
-            <p className="text-2xl sm:text-3xl md:text-4xl font-bold mt-6 text-gray-800">
+            <p className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl   font-bold mt-6 text-gray-800">
               Azizia Standard Hajj Package
             </p>
-            <p className="font-medium mt-6">
+            <p className="font-medium mt-6 lg:text-3xl">
               Committed to delivering outstanding service, ensuring your journey
               is seamless from the initial inquiry to the final step.
             </p>
             <div className="border border-gray-300 mt-6 md:mt-12 w-full md:w-[600px]"></div>
 
             {/* Features Section */}
-            <div>
+            <div className="lg:text-3xl">
               <div className="flex flex-row gap-4 items-center mt-6">
                 <BsFillBuildingsFill className="text-sky-700 text-lg md:text-xl" />
                 <p className="font-medium">Mecca - Hotel (selected)</p>
@@ -354,228 +356,11 @@ const Pakages = () => {
             <img
               src={packages2}
               alt="VIP Umrah Package"
-              className="w-full h-[300px] md:h-[500px] rounded-lg object-cover transition-transform duration-500 group-hover:scale-105 group-hover:brightness-90"
+              className="w-full h-[300px] md:h-[500px] lg:h-[600px] rounded-lg object-cover transition-transform duration-500 group-hover:scale-105 group-hover:brightness-90"
             />
           </div>
         </motion.div>
       </div>
-
-      {/* <div>
-        <p className="text-3xl text-center">
-          Available Umrah Packages from Bangladesh
-        </p>
-        <p className="text-xl text-center mb-7">
-          Plan your Umrah and Ziyarah. Our upcoming Umrah packages will
-          encompass a range of options, including economy and premium packages,
-          designed to accommodate various budgets and preferences.
-        </p>
-        <div className="flex flex-row gap-6">
-          <div className="w-1/3">
-            <div className="rounded-lg overflow-hidden">
-              <img
-                src="https://images.pexels.com/photos/28209449/pexels-photo-28209449/free-photo-of-kaaba.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-                alt="test1"
-                className="w-full rounded-t-lg"
-              />
-              <div className="bg-white rounded-b-lg">
-                <div className="shadow-lg transition-all duration-500 hover:shadow-xl dark:bg-slate-950 dark:text-white cursor-pointer rounded-lg">
-                  <div className="space-y-2 p-3">
-                    <h1 className="line-clamp-1 font-bold text-2xl">
-                      Premium Hajj
-                    </h1>
-                    <div className="flex items-center gap-2 opacity-70">
-                      <CgCalendarDates />
-                      <span>location</span>
-                    </div>
-                    <div className="flex items-center gap-2 opacity-70">
-                      <IoDocumentTextOutline />
-                      <span>guide</span>
-                    </div>
-                    <div className="flex items-center gap-2 opacity-70">
-                      <RiHotelLine />
-                      <span>hotel</span>
-                    </div>
-                    <div className="flex items-center gap-2 opacity-70">
-                      <MdNoMeals />
-                      <span>meals</span>
-                    </div>
-                    <div className="flex items-center gap-2 opacity-70">
-                      <RiPassportLine />
-                      <span>visa</span>
-                    </div>
-                    <div className="flex items-center justify-between border-t-2 py-3 !mt-3">
-                      <div className="opacity-70">
-                        <p>Cultural Relax</p>
-                      </div>
-                      <div>
-                        <p className="text-2xl font-bold">$6700</p>
-                      </div>
-                    </div>
-                    <div>
-                      <button className="flex items-center gap-2 hover:bg-card hover:text-white border-2 border-orange-500 transition-all duration-600 text-black uppercase px-5 py-3 rounded-full text-md">
-                        learn more <FaAngleRight />
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="w-1/3">
-            <div className="rounded-lg overflow-hidden">
-              <img
-                src="https://images.pexels.com/photos/28209449/pexels-photo-28209449/free-photo-of-kaaba.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-                alt="test1"
-                className="w-full rounded-t-lg"
-              />
-              <div className="bg-white rounded-b-lg">
-                <div className="shadow-lg transition-all duration-500 hover:shadow-xl dark:bg-slate-950 dark:text-white cursor-pointer rounded-lg">
-                  <div className="space-y-2 p-3">
-                    <h1 className="line-clamp-1 font-bold text-2xl">
-                      Premium Hajj
-                    </h1>
-                    <div className="flex items-center gap-2 opacity-70">
-                      <CgCalendarDates />
-                      <span>location</span>
-                    </div>
-                    <div className="flex items-center gap-2 opacity-70">
-                      <IoDocumentTextOutline />
-                      <span>guide</span>
-                    </div>
-                    <div className="flex items-center gap-2 opacity-70">
-                      <RiHotelLine />
-                      <span>hotel</span>
-                    </div>
-                    <div className="flex items-center gap-2 opacity-70">
-                      <MdNoMeals />
-                      <span>meals</span>
-                    </div>
-                    <div className="flex items-center gap-2 opacity-70">
-                      <RiPassportLine />
-                      <span>visa</span>
-                    </div>
-                    <div className="flex items-center justify-between border-t-2 py-3 !mt-3">
-                      <div className="opacity-70">
-                        <p>Cultural Relax</p>
-                      </div>
-                      <div>
-                        <p className="text-2xl font-bold">$6700</p>
-                      </div>
-                    </div>
-                    <div>
-                      <button className="flex items-center gap-2 hover:bg-card hover:text-white border-2 border-orange-500 transition-all duration-600 text-black uppercase px-5 py-3 rounded-full text-md">
-                        learn more <FaAngleRight />
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="w-1/3">
-            <div className="rounded-lg overflow-hidden">
-              <img
-                src="https://images.pexels.com/photos/28209449/pexels-photo-28209449/free-photo-of-kaaba.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-                alt="test1"
-                className="w-full rounded-t-lg"
-              />
-              <div className="bg-white rounded-b-lg">
-                <div className="shadow-lg transition-all duration-500 hover:shadow-xl dark:bg-slate-950 dark:text-white cursor-pointer rounded-lg">
-                  <div className="space-y-2 p-3">
-                    <h1 className="line-clamp-1 font-bold text-2xl">
-                      Premium Hajj
-                    </h1>
-                    <div className="flex items-center gap-2 opacity-70">
-                      <CgCalendarDates />
-                      <span>location</span>
-                    </div>
-                    <div className="flex items-center gap-2 opacity-70">
-                      <IoDocumentTextOutline />
-                      <span>guide</span>
-                    </div>
-                    <div className="flex items-center gap-2 opacity-70">
-                      <RiHotelLine />
-                      <span>hotel</span>
-                    </div>
-                    <div className="flex items-center gap-2 opacity-70">
-                      <MdNoMeals />
-                      <span>meals</span>
-                    </div>
-                    <div className="flex items-center gap-2 opacity-70">
-                      <RiPassportLine />
-                      <span>visa</span>
-                    </div>
-                    <div className="flex items-center justify-between border-t-2 py-3 !mt-3">
-                      <div className="opacity-70">
-                        <p>Cultural Relax</p>
-                      </div>
-                      <div>
-                        <p className="text-2xl font-bold">$6700</p>
-                      </div>
-                    </div>
-                    <div>
-                      <button className="flex items-center gap-2 hover:bg-card hover:text-white border-2 border-orange-500 transition-all duration-600 text-black uppercase px-5 py-3 rounded-full text-md">
-                        learn more <FaAngleRight />
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="w-1/3">
-            <div className="rounded-lg overflow-hidden">
-              <img
-                src="https://images.pexels.com/photos/28209449/pexels-photo-28209449/free-photo-of-kaaba.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-                alt="test1"
-                className="w-full rounded-t-lg"
-              />
-              <div className="bg-white rounded-b-lg">
-                <div className="shadow-lg transition-all duration-500 hover:shadow-xl dark:bg-slate-950 dark:text-white cursor-pointer rounded-lg">
-                  <div className="space-y-2 p-3">
-                    <h1 className="line-clamp-1 font-bold text-2xl">
-                      Premium Hajj
-                    </h1>
-                    <div className="flex items-center gap-2 opacity-70">
-                      <CgCalendarDates />
-                      <span>location</span>
-                    </div>
-                    <div className="flex items-center gap-2 opacity-70">
-                      <IoDocumentTextOutline />
-                      <span>guide</span>
-                    </div>
-                    <div className="flex items-center gap-2 opacity-70">
-                      <RiHotelLine />
-                      <span>hotel</span>
-                    </div>
-                    <div className="flex items-center gap-2 opacity-70">
-                      <MdNoMeals />
-                      <span>meals</span>
-                    </div>
-                    <div className="flex items-center gap-2 opacity-70">
-                      <RiPassportLine />
-                      <span>visa</span>
-                    </div>
-                    <div className="flex items-center justify-between border-t-2 py-3 !mt-3">
-                      <div className="opacity-70">
-                        <p>Cultural Relax</p>
-                      </div>
-                      <div>
-                        <p className="text-2xl font-bold">$6700</p>
-                      </div>
-                    </div>
-                    <div>
-                      <button className="flex items-center gap-2 hover:bg-card hover:text-white border-2 border-orange-500 transition-all duration-600 text-black uppercase px-5 py-3 rounded-full text-md">
-                        learn more <FaAngleRight />
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div> */}
     </div>
   );
 };

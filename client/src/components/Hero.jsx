@@ -11,141 +11,75 @@ import banner2 from "../assets/banner/banner2.jpeg";
 import banner3 from "../assets/banner/banner3.jpeg";
 import banner4 from "../assets/banner/banner4.jpeg";
 import banner5 from "../assets/banner/banner5.jpeg";
+
+const slides = [
+  {
+    img: banner1,
+    title: "Hajj & Umrah Companion",
+    desc: "Your trusted guide for a spiritual journey. Plan, book, and manage your pilgrimage with ease.",
+  },
+  {
+    img: Arafah,
+    title: "Pilgrim's Planner",
+    desc: "Simplify your Hajj and Umrah experience with real-time updates, guides, and essential resources.",
+  },
+  {
+    img: banner2,
+    title: "Makkah Journey Hub",
+    desc: "A comprehensive app for Hajj and Umrah pilgrims—bookings, itineraries, and spiritual tips all in one place.",
+  },
+  {
+    img: banner3,
+    title: "Pilgrimage Assistant",
+    desc: "Stay organized and spiritually prepared for your Hajj or Umrah with our all-in-one travel assistant.",
+  },
+  {
+    img: banner5,
+    title: "Sacred Path Planner",
+    desc: "Experience a hassle-free pilgrimage with customized itineraries, prayer reminders, and expert support.",
+  },
+  {
+    img: banner4,
+    title: "Divine Journey Guide",
+    desc: "Elevate your Hajj and Umrah experience with seamless planning, spiritual insights, and real-time support.",
+  },
+];
+
 const Hero = () => {
   return (
-    <div>
-      <div className="w-full h-screen bg-gray-100 flex items-center justify-center ">
-        <Swiper
-          spaceBetween={30}
-          effect={"fade"}
-          navigation={true}
-          pagination={{ clickable: true }}
-          autoplay={{ delay: 3000, disableOnInteraction: false }}
-          modules={[EffectFade, Navigation, Pagination, Autoplay]}
-          className="w-full max-w-7xl h-[550px]  overflow-hidden shadow-lg"
-        >
-          <SwiperSlide>
-            <div className="relative h-full w-full flex flex-col items-start pl-[100px] justify-center p-4 bg-gray-900 bg-opacity-50">
+    <div className="w-full h-screen bg-gray-100 flex items-center justify-center">
+      <Swiper
+        spaceBetween={30}
+        effect="fade"
+        navigation
+        pagination={{ clickable: true }}
+        autoplay={{ delay: 3000, disableOnInteraction: false }}
+        modules={[EffectFade, Navigation, Pagination, Autoplay]}
+        className="w-full max-w-[1920px] h-screen overflow-hidden"
+      >
+        {slides.map((slide, index) => (
+          <SwiperSlide key={index}>
+            <div className="relative w-full h-full flex items-center justify-start bg-black bg-opacity-40">
               <img
-                src={banner1}
-                alt="Nature 1"
-                className="w-full h-full object-cover absolute top-0 left-0 z-0"
+                src={slide.img}
+                alt={slide.title}
+                className="absolute top-0 left-0 w-full h-full object-cover z-0"
               />
-              <div className="relative z-10 text-white">
-                <h2 className="text-5xl font-bold mb-4">
-                  Hajj & Umrah Companion
+              <div className="relative z-10 px-4 sm:px-10 lg:px-24 max-w-[75%]">
+                <h2 className="text-white text-3xl sm:text-5xl xl:text-7xl font-bold leading-tight mb-6 drop-shadow-lg">
+                  {slide.title}
                 </h2>
-                <p className="mb-6">
-                  Your trusted guide for a spiritual journey. Plan, book, and
-                  manage your pilgrimage with ease.
+                <p className="text-white text-lg sm:text-xl xl:text-2xl mb-8 max-w-[900px] drop-shadow">
+                  {slide.desc}
                 </p>
-                {/* <button className="px-6 py-2 bg-green-500 text-white rounded-lg hover:bg-blue-600">
-                  Shop Now
+                {/* <button className="px-8 py-3 bg-green-600 text-white text-lg rounded-lg hover:bg-green-700">
+                  Learn More
                 </button> */}
               </div>
             </div>
           </SwiperSlide>
-          <SwiperSlide>
-            <div className="relative h-full w-full flex flex-col  items-start pl-[100px] justify-center p-4 bg-gray-900 bg-opacity-50">
-              <img
-                src={Arafah}
-                alt="Nature 2"
-                className="w-full h-full object-cover absolute top-0 left-0 z-0"
-              />
-              <div className="relative z-10 text-white">
-                <h2 className="text-5xl font-bold mb-4">Pilgrim's Planner</h2>
-                <p className="mb-2">
-                  Simplify your Hajj and Umrah experience with real-time
-                  updates, guides, and essential resources.
-                </p>
-                {/* <button className="px-6 py-2 bg-green-500 text-white rounded-lg hover:bg-blue-600">
-                  Explore Categories
-                </button> */}
-              </div>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="relative h-full w-full flex flex-col  items-start pl-[100px] justify-center p-4 bg-gray-900 bg-opacity-50">
-              <img
-                src={banner2}
-                alt="Nature 3"
-                className="w-full h-full object-cover absolute top-0 left-0 z-0"
-              />
-              <div className="relative z-10 text-white">
-                <h2 className="text-5xl font-bold mb-4">Makkah Journey Hub</h2>
-                <p className="mb-6">
-                  A comprehensive app for Hajj and Umrah pilgrims—bookings,
-                  itineraries, and spiritual tips all in one place.
-                </p>
-                {/* <button className="px-6 py-2 bg-green-500 text-white rounded-lg hover:bg-blue-600">
-                  Grab the Deal
-                </button> */}
-              </div>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="relative h-full w-full flex flex-col  items-start pl-[100px] justify-center p-4 bg-gray-900 bg-opacity-50">
-              <img
-                src={banner3}
-                alt="Nature 4"
-                className="w-full h-full object-cover absolute top-0 left-0 z-0"
-              />
-              <div className="relative z-10 text-white">
-                <h2 className="text-5xl font-bold mb-4">
-                  Pilgrimage Assistant
-                </h2>
-                <p className="mb-6">
-                  Stay organized and spiritually prepared for your Hajj or Umrah
-                  with our all-in-one travel assistant.
-                </p>
-                {/* <button className="px-6 py-2 bg-green-500 text-white rounded-lg hover:bg-blue-600">
-                  Grab the Deal
-                </button> */}
-              </div>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="relative h-full w-full flex flex-col  items-start pl-[100px] justify-center p-4 bg-gray-900 bg-opacity-50">
-              <img
-                src={banner5}
-                alt="Nature 4"
-                className="w-full h-full object-cover absolute top-0 left-0 z-0"
-              />
-              <div className="relative z-10 text-white">
-                <h2 className="text-5xl font-bold mb-4">Sacred Path Planner</h2>
-                <p className="mb-6">
-                  Experience a hassle-free pilgrimage with customized
-                  itineraries, prayer reminders, and expert support.
-                </p>
-                {/* <button className="px-6 py-2 bg-green-500 text-white rounded-lg hover:bg-blue-600">
-                  View New Arrivals
-                </button> */}
-              </div>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="relative h-full w-full flex flex-col  items-start pl-[100px] justify-center p-4 bg-gray-900 bg-opacity-50">
-              <img
-                src={banner4}
-                alt="Nature 4"
-                className="w-full h-full object-cover absolute top-0 left-0 z-0"
-              />
-              <div className="relative z-10 text-white">
-                <h2 className="text-5xl font-bold mb-4">
-                  Divine Journey Guide
-                </h2>
-                <p className="mb-6">
-                  Elevate your Hajj and Umrah experience with seamless planning,
-                  spiritual insights, and real-time support
-                </p>
-                {/* <button className="px-6 py-2 bg-green-500 text-white rounded-lg hover:bg-blue-600">
-                  Start Saving
-                </button> */}
-              </div>
-            </div>
-          </SwiperSlide>
-        </Swiper>
-      </div>
+        ))}
+      </Swiper>
     </div>
   );
 };

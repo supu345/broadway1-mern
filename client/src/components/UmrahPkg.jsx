@@ -38,7 +38,7 @@ const UmrahPkg = () => {
                 Exclusive Umrah Package
               </span>
             </p>
-            <p className="py-7 font-medium">
+            <p className="py-7 font-medium md:text-lg lg:text-2xl  ">
               Explore tailored Hajj and Umrah packages designed to provide a
               seamless spiritual journey with comfort, guidance, and convenience
             </p>
@@ -57,56 +57,62 @@ const UmrahPkg = () => {
                 className="w-full h-[300px] md:h-[500px] rounded-lg object-cover transition-transform duration-500 group-hover:scale-105 group-hover:brightness-90"
               />
             </div>
-            <div className="w-full md:w-3/5">
-              <p className="text-2xl sm:text-3xl md:text-4xl font-bold mt-6 text-gray-800">
+            <div className="w-full md:w-3/5 px-4 sm:px-6 lg:px-8">
+              <p className="text-xl sm:text-2xl md:text-2xl !important lg:text-5xl font-bold mt-6 text-gray-800">
                 First Ramadan Umrah Package
               </p>
-              <p className="font-medium mt-6">
+              <p className="font-medium mt-4 sm:mt-6 text-sm sm:text-base leading-relaxed">
                 Committed to delivering outstanding service, ensuring your
                 journey is seamless from the initial inquiry to the final step.
               </p>
-              <div className="border border-gray-300 mt-6 md:mt-12 w-full md:w-[600px]"></div>
+              <div className="border border-gray-300 mt-4 sm:mt-6 w-full md:w-[600px]"></div>
 
               {/* Features Section */}
               <div>
                 <div className="flex flex-row gap-4 items-center mt-6">
-                  <BsFillBuildingsFill className="text-sky-700 text-lg md:text-xl" />
-                  <p className="font-medium">Mecca - Hotel (selected)</p>
+                  <BsFillBuildingsFill className="text-sky-700 text-lg sm:text-xl" />
+                  <p className="font-medium text-sm sm:text-base">
+                    Mecca - Hotel (selected)
+                  </p>
                 </div>
 
                 <div className="flex flex-col sm:flex-row gap-6 items-start mt-6">
                   <div className="flex flex-row gap-4 items-center">
-                    <FaRegCalendar className="text-sky-700 text-lg md:text-xl" />
-                    <p className="font-medium">14 days</p>
+                    <FaRegCalendar className="text-sky-700 text-lg sm:text-xl" />
+                    <p className="font-medium text-sm sm:text-base">14 days</p>
                   </div>
                   <div className="flex flex-row gap-4 items-center">
-                    <FaHamburger className="text-sky-700 text-lg md:text-xl" />
-                    <p className="font-medium">Halal Foods</p>
+                    <FaHamburger className="text-sky-700 text-lg sm:text-xl" />
+                    <p className="font-medium text-sm sm:text-base">
+                      Halal Foods
+                    </p>
                   </div>
                 </div>
 
                 <div className="flex flex-col sm:flex-row gap-6 items-start mt-3">
                   <div className="flex flex-row gap-4 items-center">
-                    <FaCar className="text-sky-700 text-lg md:text-xl" />
-                    <p className="font-medium">Use Private VIP Bus</p>
+                    <FaCar className="text-sky-700 text-lg sm:text-xl" />
+                    <p className="font-medium text-sm sm:text-base">
+                      Use Private VIP Bus
+                    </p>
                   </div>
                   <div className="flex flex-row gap-4 items-center">
-                    <FaUserMinus className="text-sky-700 text-lg md:text-xl" />
-                    <p className="font-medium">Guided Tours</p>
+                    <FaUserMinus className="text-sky-700 text-lg sm:text-xl" />
+                    <p className="font-medium text-sm sm:text-base">
+                      Guided Tours
+                    </p>
                   </div>
                   <div className="flex flex-row gap-4 items-center">
-                    <FaCcVisa className="text-sky-700 text-lg md:text-xl" />
-                    <p className="font-medium">Visa Included</p>
+                    <FaCcVisa className="text-sky-700 text-lg sm:text-xl" />
+                    <p className="font-medium text-sm sm:text-base">
+                      Visa Included
+                    </p>
                   </div>
                 </div>
 
                 {/* Pricing and CTA */}
                 <div className="mt-6">
-                  {/* <p className="text-amber-600 font-xl">Start From</p> */}
                   <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mt-3">
-                    {/* <p className="text-3xl sm:text-4xl font-bold text-gray-800">
-                          10,000 USD
-                        </p> */}
                     <Link to="/contact">
                       <button className="mt-4 sm:mt-0 hover:border cursor-pointer p-2 bg-sky-600 text-white hover:bg-white hover:text-black px-4 rounded-full uppercase flex flex-row gap-3 items-center">
                         Contact Us
@@ -364,8 +370,8 @@ const UmrahPkg = () => {
             <p className="py-7 "></p>
 
             <div className="">
-              <div className="flex flex-row px-9 py-9 p-9 ">
-                <div className="w-1/2 shadow-md rounded-md md:w-2/5 group">
+              <div className="flex flex-col md:flex-row px-9 py-9 p-9 ">
+                <div className="w-full md:w-1/2 shadow-md rounded-md group">
                   <img
                     src={packages9}
                     alt="VIP Umrah Package"
@@ -373,7 +379,7 @@ const UmrahPkg = () => {
                   />
                 </div>
 
-                <div className="w-1/2 rounded-md bg-white shadow-md h-[500px]">
+                <div className="w-full md:w-1/2 rounded-md bg-white shadow-md h-[500px]">
                   <div className="rounded-br-lg rounded-tr-lg">
                     <div className=" transition-all duration-500  ">
                       <div className="space-y-2 p-3 pl-9">
@@ -416,11 +422,7 @@ const UmrahPkg = () => {
 
                           {/* Pricing and CTA */}
                           <div className="mt-6">
-                            {/* <p className="text-amber-600 font-xl">Start From</p> */}
                             <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mt-3">
-                              {/* <p className="text-3xl sm:text-4xl font-bold text-gray-800">
-                                                       10,000 USD
-                                                     </p> */}
                               <Link to="/contact">
                                 <button className="mt-4 sm:mt-0 hover:border cursor-pointer p-2 bg-sky-600 text-white hover:bg-white hover:text-black px-4 rounded-full uppercase flex flex-row gap-3 items-center">
                                   Contact Us

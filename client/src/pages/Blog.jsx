@@ -3,9 +3,19 @@ import Blogs from "../components/Blogs";
 import banner9 from "../assets/banner/banner9.jpeg";
 import { SlideUp } from "../utility/animation";
 import { motion } from "framer-motion";
+import { Helmet } from "react-helmet";
 const Blog = () => {
   return (
     <div>
+      <Helmet>
+        <title>Blog - Hajj Travel Agency</title>
+        <meta
+          name="description"
+          content="Explore the best Hajj and Umrah packages with our trusted travel agency."
+        />
+        <link rel="canonical" href="https://broadwayhajj.com" />
+      </Helmet>
+
       <motion.div
         variants={SlideUp(0.7)}
         initial="hidden"

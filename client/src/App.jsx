@@ -1,4 +1,5 @@
 //import "./App.css";
+import { Helmet } from "react-helmet";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
 import HajjPackages from "./pages/HajjPackages";
@@ -12,9 +13,32 @@ import Blog from "./pages/Blog";
 import Gallery from "./pages/Gallery";
 import BlogDetailsTwo from "./pages/BlogDetailsTwo";
 import BlogDetailsThree from "./pages/BlogDetailsThree";
+import NotificationDialog from "./components/NotificationDialog";
+import { useState } from "react";
 function App() {
+  const [isDialogVisible, setIsDialogVisible] = useState(true);
+
+  const handleClose = () => {
+    setIsDialogVisible(false);
+  };
+
+  const handleAccept = () => {
+    console.log("User accepted notifications");
+    setIsDialogVisible(false);
+  };
   return (
     <div>
+      <Helmet>
+        <title>Hajj Travel Agency</title>
+        <meta
+          name="description"
+          content="Explore the best Hajj and Umrah packages with our trusted travel agency."
+        />
+        <link rel="canonical" href="https://broadwayhajj.com" />
+      </Helmet>
+      <div className="">
+        <NotificationDialog isVisible={isDialogVisible} onClose={handleClose} />
+      </div>
       <BrowserRouter>
         <Headers />
         <Routes>
